@@ -34,8 +34,8 @@ const ForumInfo = () => (
     </div>
     <div className={styles.contacts}>
       <span>Обратная связь</span>
-      {contactsData.map(({ icon, info }) => (
-        <Contact key={icon} info={info} icon={icon} />
+      {contactsData.map(({ icon, info, linkType }) => (
+        <Contact key={icon} info={info} linkType={linkType} icon={icon} />
       ))}
     </div>
   </div>

@@ -60,7 +60,11 @@ export const accordionData = {
 };
 
 export const contactsData = [
-  { icon: "./img/phone.png", info: "+7 (812) 406 77 02" },
-  { icon: "./img/link.png", info: "https://legalforum.info" },
-  { icon: "./img/mail.png", info: "contact@legalforum.info" },
+  { icon: "./img/phone.png", info: "+7 (812) 406 77 02", linkType: "tel:" },
+  { icon: "./img/link.png", info: "https://legalforum.info", linkType: "" },
+  {
+    icon: "./img/mail.png",
+    info: "contact@legalforum.info",
+    linkType: "mailto:",
+  },
 ];
