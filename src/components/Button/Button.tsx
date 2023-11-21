@@ -6,7 +6,7 @@ const Button = ({
   children,
   ...props
 }: React.ButtonHTMLAttributes<HTMLButtonElement>) => (
-  <button {...props} className={styles.button}>
+  <button className={styles.button} {...props}>
     {children}
   </button>
 );
