@@ -8,16 +8,14 @@ export type ManuItemProps = {
   active: boolean;
 };
 
-const MenuItem: FC<ManuItemProps> = ({ name, active }) => {
-  return (
-    <div
-      className={cn(styles.item, {
-        [styles.active]: active,
-      })}
-    >
-      {name}
-    </div>
-  );
-};
+const MenuItem: FC<ManuItemProps> = ({ name, active }) => (
+  <div
+    className={cn(styles.item, {
+      [styles.active]: active,
+    })}
+  >
+    {name}
+  </div>
+);
 
 export default MenuItem;

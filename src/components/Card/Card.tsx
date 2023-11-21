@@ -8,18 +8,16 @@ export type CardProps = {
   icon: string;
 };
 
-const Card: FC<CardProps> = ({ color, name, icon }) => {
-  return (
-    <div
-      className={styles.card}
-      style={{
-        background: `linear-gradient(${color})`,
-      }}
-    >
-      <img className={styles.icon} src={icon} alt={name}></img>
-      <div>{name}</div>
-    </div>
-  );
-};
+const Card: FC<CardProps> = ({ color, name, icon }) => (
+  <div
+    className={styles.card}
+    style={{
+      background: `linear-gradient(${color})`,
+    }}
+  >
+    <img className={styles.icon} src={icon} alt={name}></img>
+    <div>{name}</div>
+  </div>
+);
 
 export default Card;
