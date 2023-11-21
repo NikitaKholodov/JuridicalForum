@@ -1,7 +1,8 @@
 import React, { FC, useState } from "react";
 
-import styles from "./styles.module.scss";
 import cn from "classnames";
+
+import styles from "./styles.module.scss";
 
 export type AccordionProps = {
   title: string;

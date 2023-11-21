@@ -3,9 +3,7 @@ import React from "react";
 import MenuItem from "../MenuItem/MenuItem";
 import Card from "../Card/Card";
 import Accordion from "../Accordion/Accordion";
-
-import styles from "./styles.module.scss";
-
+import Contact from "../Contact/Contact";
 import burger from "../../assets/icons/burger.png";
 
 import {
@@ -14,7 +12,8 @@ import {
   contactsData,
   menuData,
 } from "../../data/data.mock";
-import Contact from "../Contact/Contact";
+
+import styles from "./styles.module.scss";
 
 export default function ForumInfo() {
   return (
