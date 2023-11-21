@@ -1,0 +1,53 @@
+.header {
+  background: url("../../assets/Background.webp");
+  background-color: #122a5b;
+  background-size: 100%;
+  height: 339px;
+  padding: 20px 24px 24px 24px;
+  color: #fff;
+}
+
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 32px;
+}
+
+.rightButtons {
+  display: flex;
+  gap: 12px;
+}
+
+.title {
+  display: flex;
+  gap: 18px;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 25.2px;
+  margin-bottom: 22px;
+
+  span {
+    margin-top: 3px;
+  }
+}
+
+.subtitle {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 19px;
+  max-width: 241px;
+  margin-bottom: 16px;
+}
+
+.status {
+  max-width: 98px;
+  font-size: 11px;
+  font-weight: 400;
+  line-height: 18px;
+  padding: 8px 16px;
+  background-color: #ffffff52;
+  border-radius: 8px;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}

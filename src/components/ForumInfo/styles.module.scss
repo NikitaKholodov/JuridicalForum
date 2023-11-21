@@ -1,0 +1,75 @@
+.content {
+  margin-top: -44px;
+  border-radius: 24px 24px 0px 0px;
+  background-color: #f2f5f7;
+  padding: 24px;
+}
+
+.menu {
+  display: flex;
+  background-color: transparent;
+  gap: 8px;
+  overflow-x: auto;
+  z-index: 1;
+
+  img {
+    max-height: 40px;
+  }
+}
+
+.cards {
+  display: grid;
+  grid-gap: 12px;
+  grid-template-areas: "a a b b b b" "c c c c d d" "f f f e e e";
+  grid-template-rows: 158px 150px 158px;
+  margin-top: 12px;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 18px;
+  margin-bottom: 32px;
+
+  div:nth-child(1) {
+    grid-area: a;
+  }
+
+  div:nth-child(2) {
+    grid-area: b;
+  }
+
+  div:nth-child(3) {
+    grid-area: c;
+  }
+
+  div:nth-child(4) {
+    grid-area: d;
+    min-width: 100px;
+  }
+
+  div:nth-child(5) {
+    grid-area: f;
+  }
+
+  div:nth-child(6) {
+    grid-area: e;
+  }
+}
+
+.description {
+  margin-bottom: 12px;
+}
+
+.contacts {
+  border-radius: 24px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+
+  span {
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 25px;
+    margin-bottom: 12px;
+  }
+}

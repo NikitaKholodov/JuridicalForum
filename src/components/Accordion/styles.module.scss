@@ -1,0 +1,36 @@
+.wrapper {
+  border-radius: 24px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  background-color: #fff;
+}
+
+.title {
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 25px;
+}
+
+.content {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  color: rgba(119, 138, 155, 1);
+  overflow: hidden;
+  max-height: 122px;
+  text-overflow: ellipsis;
+}
+
+.button {
+  color: rgba(166, 25, 46, 1);
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 14px;
+  cursor: pointer;
+}
+
+.opened {
+  max-height: 100%;
+}

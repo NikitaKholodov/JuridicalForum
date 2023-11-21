@@ -1,0 +1,17 @@
+.item {
+  padding: 11px 21px;
+  border-radius: 12px;
+  max-height: 24px;
+  display: block;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 18px;
+  color: #778a9b;
+  background-color: #fff;
+  margin-bottom: 12px;
+}
+
+.active {
+  background-color: rgba(33, 33, 34, 1);
+  color: #fff;
+}
