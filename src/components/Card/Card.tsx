@@ -15,7 +15,9 @@ const Card: FC<CardProps> = ({ color, name, icon }) => (
       background: `linear-gradient(${color})`,
     }}
   >
-    <img className={styles.icon} src={icon} alt={name}></img>
+    <div className={styles.icon}>
+      <img src={icon} alt={name}></img>
+    </div>
     <div>{name}</div>
   </div>
 );

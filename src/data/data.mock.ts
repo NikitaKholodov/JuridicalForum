@@ -1,3 +1,12 @@
+export const headerData = {
+  title: "XI ПЕТЕРБУРГСКИЙ МЕЖДУНАРОДНЫЙ ЮРИДИЧЕСКОЙ ФОРУМ 2023",
+  subtitle: "11-13 мая • КВЦ «Экспофорум» • Санкт-Петербург, Россия",
+  logo: "./img/logo.png",
+  background: "./img/background.png",
+  bgcolor: "#122a5b",
+  isMember: true,
+};
+
 export const menuData = [
   {
     name: "Сервисы",

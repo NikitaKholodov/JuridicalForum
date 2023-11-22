@@ -5,13 +5,21 @@ import Button from "../../components/Button/Button";
 import { ReactComponent as Arrow } from "../../assets/icons/Arrow.svg";
 import { ReactComponent as Notifications } from "../../assets/icons/Notifications.svg";
 import { ReactComponent as Share } from "../../assets/icons/Share.svg";
-import { ReactComponent as Logo } from "../../assets/icons/Logo.svg";
 import { ReactComponent as Confirmed } from "../../assets/icons/Confirmed.svg";
+
+import { headerData } from "../../data/data.mock";
 
 import styles from "./styles.module.scss";
 
 const Header = () => (
-  <header className={styles.header}>
+  <header
+    className={styles.header}
+    style={{
+      background: `url(${headerData.background})`,
+      backgroundColor: headerData.bgcolor,
+      backgroundSize: "100%",
+    }}
+  >
     <div className={styles.navigation}>
       <div className={styles.return}>
         <Button>
@@ -29,17 +37,17 @@ const Header = () => (
     </div>
     <div className={styles.title}>
       <div className={styles.logo}>
-        <Logo />
+        <img src={headerData.logo} alt="Logo"></img>
       </div>
-      <span>XI ПЕТЕРБУРГСКИЙ МЕЖДУНАРОДНЫЙ ЮРИДИЧЕСКОЙ ФОРУМ 2023</span>
+      <span>{headerData.title}</span>
     </div>
-    <div className={styles.subtitle}>
-      11-13 мая • КВЦ «Экспофорум» • Санкт-Петербург, Россия
-    </div>
-    <div className={styles.status}>
-      <div>Вы участник</div>
-      <Confirmed />
-    </div>
+    <div className={styles.subtitle}>{headerData.subtitle}</div>
+    {headerData.isMember ? (
+      <div className={styles.status}>
+        <div>Вы участник</div>
+        <Confirmed />
+      </div>
+    ) : null}
   </header>
 );
 

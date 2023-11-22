@@ -1,7 +1,4 @@
 .header {
-  background: url("../../assets/Background.webp");
-  background-color: #122a5b;
-  background-size: 100%;
   height: 339px;
   padding: 20px 24px 24px 24px;
   color: #fff;
@@ -31,6 +28,16 @@
   }
 }
 
+.logo {
+  max-width: 68px;
+  width: 100%;
+  max-height: 71px;
+
+  img {
+    width: 100%;
+  }
+}
+
 .subtitle {
   font-size: 16px;
   font-weight: 500;
@@ -45,7 +52,8 @@
   font-weight: 400;
   line-height: 18px;
   padding: 8px 16px;
-  background-color: #ffffff52;
+  background-color: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(12px);
   border-radius: 8px;
   display: flex;
   gap: 8px;

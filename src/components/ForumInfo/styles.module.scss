@@ -9,12 +9,7 @@
   display: flex;
   background-color: transparent;
   gap: 8px;
-  overflow-x: auto;
-  z-index: 1;
-
-  img {
-    max-height: 40px;
-  }
+  overflow: hidden;
 }
 
 .cards {
@@ -35,8 +30,9 @@
 
   div:nth-child(2) {
     grid-area: b;
+
     div {
-      margin-top: 10px;
+      max-height: 60px;
     }
   }
 
@@ -47,6 +43,10 @@
   div:nth-child(4) {
     grid-area: d;
     min-width: 100px;
+
+    div {
+      max-height: 60px;
+    }
   }
 
   div:nth-child(5) {
