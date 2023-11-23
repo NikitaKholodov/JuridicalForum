@@ -1,4 +1,4 @@
-import React from "react";
+import React, { FC } from "react";
 import {
   createStyles,
   makeStyles,
@@ -8,7 +8,7 @@ import {
 import AppBar from "@material-ui/core/AppBar";
 import Tabs from "@material-ui/core/Tabs";
 import Tab from "@material-ui/core/Tab";
-import { menuData } from "../../data/data.mock";
+import { tabsData } from "../../data/data.mock";
 import burger from "../../assets/icons/burger.png";
 import styles from "./styles.module.scss";
 
@@ -37,6 +37,7 @@ const StyledTab = withStyles((theme: Theme) =>
       minHeight: 40,
       maxHeight: 40,
       borderRadius: 12,
+      fontSize: 13,
       backgroundColor: "#ffffff",
       padding: "11px 21px",
       color: "#778A9B",
@@ -55,7 +56,15 @@ interface StyledTabProps {
   label: string;
 }
 
-export default function ScrollableTabPanel() {
+export type ScrollableTabPanelProps = {
+  setIsMenuOpen: (value: boolean) => void;
+  isMenuOpen: boolean;
+};
+
+const ScrollableTabPanel: FC<ScrollableTabPanelProps> = ({
+  setIsMenuOpen,
+  isMenuOpen,
+}) => {
   const classes = useStyles();
   const [value, setValue] = React.useState(0);
 
@@ -73,12 +82,19 @@ export default function ScrollableTabPanel() {
           scrollButtons="off"
           aria-label="scrollable auto tabs example"
         >
-          <img className={styles.menuIcon} src={burger} alt="menu" />
-          {menuData.map(({ name, active }) => (
+          <img
+            className={styles.menuIcon}
+            src={burger}
+            alt="menu"
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+          />
+          {tabsData.map(({ name, active }) => (
             <StyledTab key={name} label={name} />
           ))}
         </StyledTabs>
       </AppBar>
     </div>
   );
-}
+};
+
+export default ScrollableTabPanel;

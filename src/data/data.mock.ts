@@ -7,7 +7,7 @@ export const headerData = {
   isMember: true,
 };
 
-export const menuData = [
+export const tabsData = [
   {
     name: "Сервисы",
     active: true,
@@ -76,4 +76,23 @@ export const contactsData = [
     info: "contact@legalforum.info",
     linkType: "mailto:",
   },
+];
+
+export const menuData = [
+  {
+    name: "Сервисы",
+    sublist: [
+      "Программа",
+      "Карта",
+      "Спикеры",
+      "Партнеры",
+      "Фотографии",
+      "Найти стенд",
+    ],
+  },
+  { name: "Описание", sublist: [] },
+  { name: "Контакты", sublist: [] },
+  { name: "FAQ", sublist: [] },
+  { name: "Обратная связь", sublist: [] },
+  { name: "Пройти опрос", sublist: [] },
 ];
