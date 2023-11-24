@@ -2,7 +2,8 @@ import React, { useState } from "react";
 
 import Header from "./components/Header/Header";
 import ForumInfo from "./components/ForumInfo/ForumInfo";
-import Menu from "./components/Menu/Menu";
+import BottomDrawer from "./components/BottomDrawer/BottomDrawer";
+import MenuList from "./components/MenuList/MenuList";
 
 function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -15,7 +16,9 @@ function App() {
     <div>
       <Header />
       <ForumInfo isMenuOpen={isMenuOpen} setIsMenuOpen={handleOpen} />
-      <Menu isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} />
+      <BottomDrawer isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen}>
+        <MenuList setIsMenuOpen={setIsMenuOpen} />
+      </BottomDrawer>
     </div>
   );
 }
