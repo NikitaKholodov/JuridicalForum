@@ -5,6 +5,8 @@ import { ReactComponent as Close } from "../../assets/icons/Close.svg";
 import { menuData } from "../../data/data.mock";
 
 import styles from "./styles.module.scss";
+import BottomDrawer from "../BottomDrawer/BottomDrawer";
+import Programms from "../Programms/Programms";
 
 export type MenuListProps = {
   setIsMenuOpen: (value: boolean) => void;
@@ -27,12 +29,12 @@ const MenuList: FC<MenuListProps> = ({ setIsMenuOpen }) => {
         <div className={styles.body}>
           <ul className={styles.menuList}>
             {menuData.map(({ name, sublist }) => (
-              <li>
+              <li key={name}>
                 {name}
                 {sublist.length ? (
                   <ul className={styles.menuSublist}>
                     {sublist.map((item) => (
-                      <li>{item}</li>
+                      <li key={item}>{item}</li>
                     ))}
                   </ul>
                 ) : null}
@@ -41,6 +43,9 @@ const MenuList: FC<MenuListProps> = ({ setIsMenuOpen }) => {
           </ul>
         </div>
       </div>
+      <BottomDrawer isMenuOpen={true} setIsMenuOpen={() => 1}>
+        <Programms />
+      </BottomDrawer>
     </div>
   );
 };

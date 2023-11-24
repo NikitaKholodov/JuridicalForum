@@ -96,3 +96,105 @@ export const menuData = [
   { name: "Обратная связь", sublist: [] },
   { name: "Пройти опрос", sublist: [] },
 ];
+
+export const programmsData = {
+  topTabs: ["Программы", "Спикеры", "Партнеры"],
+  date: {
+    currentMonth: "Август",
+    currentYear: 2023,
+    activeDays: [
+      { dayName: "Вт", dayNumber: 12, isChosen: true, fullDate: "12.08.2023" },
+      { dayName: "Ср", dayNumber: 13, isChosen: false, fullDate: "13.08.2023" },
+      { dayName: "Чт", dayNumber: 14, isChosen: false, fullDate: "14.08.2023" },
+      { dayName: "Пт", dayNumber: 15, isChosen: false, fullDate: "15.08.2023" },
+      { dayName: "Сб", dayNumber: 16, isChosen: false, fullDate: "16.08.2023" },
+    ],
+    disabledDays: [
+      { dayName: "Вс", dayNumber: 17 },
+      { dayName: "Пн", dayNumber: 18 },
+      { dayName: "Вт", dayNumber: 19 },
+      { dayName: "Ср", dayNumber: 20 },
+    ],
+  },
+  programm: [
+    {
+      date: "12.08.2023",
+      ivents: [
+        {
+          time: "10:00 - 11:30",
+          gtm: "GTM+3",
+          card: [
+            {
+              status: "Трансляция",
+              category: "Право, бизнес, санкции",
+              title: "Ответственность топ-менеджеров в новой реальности",
+              place: "Конгресс-центр,конференц-зал B1",
+              datetime: "29 июн 2022 • 10:00–11:30 ",
+              background: "",
+            },
+            {
+              status: "Трансляция",
+              category: "Человек и право",
+              title:
+                "Открытый диалог «О правовых проблемах, возникающих при рассмотрении споров потребителей финансовых услуг с финансовыми организациями»",
+              place: "Конгресс-центр, конференц-зал B2",
+              datetime: "29 июн 2022 • 10:00–11:30 ",
+              background: "",
+            },
+          ],
+        },
+        {
+          time: "12:00",
+          gtm: "GTM+3",
+          card: [
+            {
+              status: "Трансляция",
+              category: "Цифровая трансформация",
+              title: "Криптовалюты и их место в экономике будущего",
+              place: "Конгресс-центр, конференц-зал B1",
+              datetime: "29 июн 2022 • 12:00",
+              background: "",
+            },
+            {
+              status: "Трансляция",
+              category: "Право, бизнес, санкции",
+              title:
+                "Участие нотариуса в корпоративном управлении: нужна ли бизнесу нотариальная опека?",
+              place: "Конгресс-центр, конференц-зал B2",
+              datetime: "29 июн 2022 • 10:00–11:30 ",
+              background: "",
+            },
+          ],
+        },
+      ],
+    },
+    {
+      date: "13.08.2023",
+      ivents: [
+        {
+          time: "12:00",
+          gtm: "GTM+3",
+          card: [
+            {
+              status: "Трансляция",
+              category: "Цифровая трансформация",
+              title: "Криптовалюты и их место в экономике будущего",
+              place: "Конгресс-центр, конференц-зал B1",
+              datetime: "29 июн 2022 • 12:00",
+              background: "",
+            },
+            {
+              status: "Трансляция",
+              category: "Право, бизнес, санкции",
+              title:
+                "Участие нотариуса в корпоративном управлении: нужна ли бизнесу нотариальная опека?",
+              place: "Конгресс-центр, конференц-зал B2",
+              datetime: "29 июн 2022 • 10:00–11:30 ",
+              background: "",
+            },
+          ],
+        },
+      ],
+    },
+  ],
+};
