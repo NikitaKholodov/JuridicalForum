@@ -117,6 +117,7 @@ export const programmsData = {
       { dayName: "Ср", dayNumber: 20, fullDate: "20.08.2023"  },
     ],
   },
+  programmsTabs: ['Архитектура программы', 'Деловая программа', 'Стенд Минюста', 'Международный молодежный юридический форум'],
   programm: [
     {
       date: "12.08.2023",

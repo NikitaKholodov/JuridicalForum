@@ -1,7 +1,7 @@
 import React, { FC } from "react";
 import cn from "classnames";
 
-import { ReactComponent as Live } from "../../assets/icons/live.svg";
+import { ReactComponent as Live } from "../../../assets/icons/live.svg";
 
 import styles from "./styles.module.scss";
 

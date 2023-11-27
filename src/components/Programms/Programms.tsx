@@ -2,12 +2,13 @@ import React, { FC } from "react";
 
 
 import SliderTabPanel from "../SliderTabPanel/SliderTabPanel";
-import ProgrammCard from "../ProgrammCard/ProgrammCard";
+import ProgrammCard from "./ProgrammCard/ProgrammCard";
 
 import { programmsData } from "../../data/data.mock";
 
 import styles from "./styles.module.scss";
 import Calendar from "../Calendar/Calendar";
+import ProgrammsTabs from "./ProgrammsTabs/ProgrammsTabs";
 
 const Programms: FC = () => {
   return (
@@ -27,7 +28,9 @@ const Programms: FC = () => {
         <div className={styles.calendar}>
           <Calendar />
         </div>
-        <div className={styles.tabs}></div>
+        <div className={styles.tabs}>
+          <ProgrammsTabs data = {programmsData.programmsTabs}/>
+        </div>
         <div className={styles.programm}>
           {programmsData.programm[0].ivents.map((item) => (
             <>
