@@ -7,6 +7,7 @@ import ProgrammCard from "../ProgrammCard/ProgrammCard";
 import { programmsData } from "../../data/data.mock";
 
 import styles from "./styles.module.scss";
+import Calendar from "../Calendar/Calendar";
 
 const Programms: FC = () => {
   return (
@@ -23,7 +24,9 @@ const Programms: FC = () => {
         <div className={styles.title}>
           {programmsData.date.currentMonth} {programmsData.date.currentYear}
         </div>
-        <div className={styles.calendar}></div>
+        <div className={styles.calendar}>
+          <Calendar />
+        </div>
         <div className={styles.tabs}></div>
         <div className={styles.programm}>
           {programmsData.programm[0].ivents.map((item) => (

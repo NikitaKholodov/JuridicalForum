@@ -1,0 +1,44 @@
+.calendar {
+  display: flex;
+  color: #778A9B;
+  gap: 5px;
+  color: #778A9B;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 20px;
+}
+
+.activeDays, .disabledDays {
+  display: flex;
+  gap: 5px;
+}
+
+.activeDays {
+  background-color: #fff;
+  border-radius: 8px;
+}
+
+.disabledDays {
+  opacity: 0.4;
+}
+
+.day {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+  width: 32px;
+
+  div {
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.chosen {
+  border-radius: 8px;
+  background: #212122;
+  color: #fff;
+}

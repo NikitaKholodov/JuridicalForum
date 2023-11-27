@@ -111,10 +111,10 @@ export const programmsData = {
       { dayName: "Сб", dayNumber: 16, isChosen: false, fullDate: "16.08.2023" },
     ],
     disabledDays: [
-      { dayName: "Вс", dayNumber: 17 },
-      { dayName: "Пн", dayNumber: 18 },
-      { dayName: "Вт", dayNumber: 19 },
-      { dayName: "Ср", dayNumber: 20 },
+      { dayName: "Вс", dayNumber: 17, fullDate: "17.08.2023"  },
+      { dayName: "Пн", dayNumber: 18, fullDate: "18.08.2023"  },
+      { dayName: "Вт", dayNumber: 19, fullDate: "19.08.2023"  },
+      { dayName: "Ср", dayNumber: 20, fullDate: "20.08.2023"  },
     ],
   },
   programm: [
