@@ -1,9 +1,12 @@
 import React, { FC } from "react";
 
-import styles from "./styles.module.scss";
+
 import SliderTabPanel from "../SliderTabPanel/SliderTabPanel";
-import { programmsData } from "../../data/data.mock";
 import ProgrammCard from "../ProgrammCard/ProgrammCard";
+
+import { programmsData } from "../../data/data.mock";
+
+import styles from "./styles.module.scss";
 
 const Programms: FC = () => {
   return (
@@ -14,7 +17,9 @@ const Programms: FC = () => {
           <div>Программы</div>
           <div></div>
         </div>
-        <SliderTabPanel />
+        <div className={styles.sliderTabs}>
+          <SliderTabPanel />
+        </div>
         <div className={styles.title}>
           {programmsData.date.currentMonth} {programmsData.date.currentYear}
         </div>
@@ -23,7 +28,9 @@ const Programms: FC = () => {
         <div className={styles.programm}>
           {programmsData.programm[0].ivents.map((item) => (
             <>
-              <div className={styles.iventTime}>{item.time}</div>
+              <div className={styles.iventTime}>
+                {item.time} <span>{item.gtm}</span>
+              </div>
               <div className={styles.ivents}>
                 {item.card.map(
                   ({

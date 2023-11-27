@@ -97,6 +97,7 @@ export const menuData = [
   { name: "Пройти опрос", sublist: [] },
 ];
 
+
 export const programmsData = {
   topTabs: ["Программы", "Спикеры", "Партнеры"],
   date: {
@@ -139,7 +140,7 @@ export const programmsData = {
                 "Открытый диалог «О правовых проблемах, возникающих при рассмотрении споров потребителей финансовых услуг с финансовыми организациями»",
               place: "Конгресс-центр, конференц-зал B2",
               datetime: "29 июн 2022 • 10:00–11:30 ",
-              background: "",
+              background: "./img/cardBackground.jpg",
             },
           ],
         },
@@ -162,7 +163,7 @@ export const programmsData = {
                 "Участие нотариуса в корпоративном управлении: нужна ли бизнесу нотариальная опека?",
               place: "Конгресс-центр, конференц-зал B2",
               datetime: "29 июн 2022 • 10:00–11:30 ",
-              background: "",
+              background: "./img/cardBackground.jpg",
             },
           ],
         },

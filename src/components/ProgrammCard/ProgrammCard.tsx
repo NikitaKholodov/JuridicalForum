@@ -1,4 +1,7 @@
 import React, { FC } from "react";
+import cn from "classnames";
+
+import { ReactComponent as Live } from "../../assets/icons/live.svg";
 
 import styles from "./styles.module.scss";
 
@@ -11,6 +14,7 @@ export type ProgrammCardProps = {
   background?: string;
 };
 
+
 const ProgrammCard: FC<ProgrammCardProps> = ({
   status,
   category,
@@ -19,12 +23,35 @@ const ProgrammCard: FC<ProgrammCardProps> = ({
   datetime,
   background,
 }) => (
-  <div className={styles.card}>
-    <div className={styles.status}>{status}</div>
-    <div className={styles.category}>{category}</div>
-    <div className={styles.title}>{title}</div>
-    <div className={styles.place}>{place}</div>
-    <div className={styles.datetime}>{datetime}</div>
+  <div className={styles.wrapper} style={{
+    background: `url(${background})`,
+    backgroundSize: "cover",
+    
+  }}>
+    <div
+      className={cn(styles.card, {
+        [styles.shadow]: !!background,
+      })}
+      
+    >
+      <div className={styles.status}><span>{status}</span> <Live /></div>
+      <div className={styles.category}>{category}</div>
+      <div
+        className={cn(styles.title, {
+          [styles.whiteText]: !!background,
+        })}
+      >
+        {title}
+      </div>
+      <div className={cn(styles.place, { [styles.whiteText]: !!background })}>
+        {place}
+      </div>
+      <div
+        className={cn(styles.datetime, { [styles.whiteText]: !!background })}
+      >
+        {datetime}
+      </div>
+    </div>
   </div>
 );
 
