@@ -12,6 +12,7 @@ export type ProgrammCardProps = {
   place?: string;
   datetime?: string;
   background?: string;
+  fullWidth?: boolean
 };
 
 
@@ -22,8 +23,11 @@ const ProgrammCard: FC<ProgrammCardProps> = ({
   place,
   datetime,
   background,
+  fullWidth
 }) => (
-  <div className={styles.wrapper} style={{
+  <div className={cn(styles.wrapper, {
+    [styles.fullWidth]: fullWidth
+  })} style={{
     background: `url(${background})`,
     backgroundSize: "cover",
     

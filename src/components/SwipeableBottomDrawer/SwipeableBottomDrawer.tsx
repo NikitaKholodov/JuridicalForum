@@ -1,5 +1,5 @@
 import React, { FC } from "react";
-import { makeStyles, Drawer } from "@material-ui/core";
+import { makeStyles,  SwipeableDrawer } from "@material-ui/core";
 
 const useStyles = makeStyles({
   paper: {
@@ -8,13 +8,13 @@ const useStyles = makeStyles({
   },
 });
 
-export type BottomDrawerProps = {
+export type SwipeableBottomDrawerProps = {
   isPageOpen: boolean;
   setIsPageOpen: (value: boolean) => void;
   children: React.ReactNode;
 };
 
-const BottomDrawer: FC<BottomDrawerProps> = ({
+const SwipeableBottomDrawer: FC<SwipeableBottomDrawerProps> = ({
   isPageOpen,
   setIsPageOpen,
   children,
@@ -38,17 +38,18 @@ const BottomDrawer: FC<BottomDrawerProps> = ({
   return (
     <div>
       <React.Fragment>
-        <Drawer
+        <SwipeableDrawer
           classes={{ paper: classes.paper }}
           anchor={"bottom"}
           open={isPageOpen}
           onClose={toggleDrawer(false)}
+          onOpen={toggleDrawer(true)}
         >
           {children}
-        </Drawer>
+        </SwipeableDrawer>
       </React.Fragment>
     </div>
   );
 };
 
-export default BottomDrawer;
+export default SwipeableBottomDrawer;

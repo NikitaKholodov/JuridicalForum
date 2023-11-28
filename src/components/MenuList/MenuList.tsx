@@ -1,4 +1,4 @@
-import React, { FC } from "react";
+import React, { FC, useState } from "react";
 
 import { ReactComponent as Close } from "../../assets/icons/Close.svg";
 
@@ -13,6 +13,8 @@ export type MenuListProps = {
 };
 
 const MenuList: FC<MenuListProps> = ({ setIsMenuOpen }) => {
+  const [programmsOpened, setProgrammsOpened] = useState(false)
+
   return (
     <div>
       <div className={styles.menu}>
@@ -34,7 +36,7 @@ const MenuList: FC<MenuListProps> = ({ setIsMenuOpen }) => {
                 {sublist.length ? (
                   <ul className={styles.menuSublist}>
                     {sublist.map((item) => (
-                      <li key={item}>{item}</li>
+                      <li key={item} onClick={() =>  setProgrammsOpened(true)}>{item}</li>
                     ))}
                   </ul>
                 ) : null}
@@ -43,8 +45,8 @@ const MenuList: FC<MenuListProps> = ({ setIsMenuOpen }) => {
           </ul>
         </div>
       </div>
-      <BottomDrawer isMenuOpen={true} setIsMenuOpen={() => 1}>
-        <Programms />
+      <BottomDrawer isPageOpen={programmsOpened} setIsPageOpen={() => setProgrammsOpened(false)}>
+        <Programms setIsPageOpen={() => setProgrammsOpened(false)} />
       </BottomDrawer>
     </div>
   );

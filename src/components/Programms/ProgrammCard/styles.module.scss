@@ -8,7 +8,8 @@
 .card {
   display: flex;
   flex-direction: column;
-  width: 229px;
+  min-width: 229px;
+  max-width: 327px;
   max-height: 197px;
   height: 100%;
   justify-content: center;
@@ -82,4 +83,8 @@
 
 .shadow {
   background: linear-gradient(180deg, rgba(0, 0, 0, 0.00) 0%, rgba(0, 0, 0, 0.02) 9.22%, rgba(0, 0, 0, 0.05) 18.76%, rgba(0, 0, 0, 0.12) 28.48%, rgba(0, 0, 0, 0.20) 38.19%, rgba(0, 0, 0, 0.29) 47.75%, rgba(0, 0, 0, 0.39) 56.99%, rgba(0, 0, 0, 0.50) 65.75%, rgba(0, 0, 0, 0.61) 73.87%, rgba(0, 0, 0, 0.71) 81.18%, rgba(0, 0, 0, 0.80) 87.52%, rgba(0, 0, 0, 0.88) 92.74%, rgba(0, 0, 0, 0.95) 96.66%, rgba(0, 0, 0, 0.98) 99.14%, #000 100%);
+}
+
+.fullWidth {
+  width: 100%;
 }
