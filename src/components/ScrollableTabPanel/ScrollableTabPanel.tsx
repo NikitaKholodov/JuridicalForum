@@ -1,15 +1,19 @@
 import React, { FC } from "react";
+
 import {
   createStyles,
   makeStyles,
   Theme,
   withStyles,
 } from "@material-ui/core/styles";
+
 import AppBar from "@material-ui/core/AppBar";
 import Tabs from "@material-ui/core/Tabs";
 import Tab from "@material-ui/core/Tab";
-import { tabsData } from "../../data/data.mock";
 import burger from "../../assets/icons/burger.png";
+
+import { tabsData } from "../../data/data.mock";
+
 import styles from "./styles.module.scss";
 
 const useStyles = makeStyles((theme: Theme) => ({

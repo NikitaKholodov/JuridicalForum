@@ -1,6 +1,6 @@
 .wrapper {
   border-radius: 16px;
-  padding: 16px 24px;
+  padding: 16px 24px 16px 32px;
 }
 
 .head {
@@ -14,6 +14,13 @@
   span {
     line-height: 28px;
   }
+}
+
+.back {
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
 }
 
 .closeButton {

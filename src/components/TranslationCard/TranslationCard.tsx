@@ -1,7 +1,6 @@
 import React, { FC } from "react";
 import cn from "classnames";
 
-import Button from "../Button/Button";
 import { ReactComponent as Share2 } from "../../assets/icons/Share2.svg";
 
 import { translationData } from "../../data/data.mock";

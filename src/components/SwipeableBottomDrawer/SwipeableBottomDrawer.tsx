@@ -1,5 +1,6 @@
 import React, { FC } from "react";
-import { makeStyles,  SwipeableDrawer } from "@material-ui/core";
+
+import { makeStyles, SwipeableDrawer } from "@material-ui/core";
 
 const useStyles = makeStyles({
   paper: {

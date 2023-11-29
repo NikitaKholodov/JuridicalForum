@@ -76,7 +76,7 @@ const ProgrammCard: FC<ProgrammCardProps> = ({
           place={place}
           datetime={datetime}
           background={background}
-          setIsPageOpen={() => setIsProgrammInfoOpen(false)}
+          setIsPageOpen={setIsProgrammInfoOpen}
         />
       </BottomDrawer>
     </div>

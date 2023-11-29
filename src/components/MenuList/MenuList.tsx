@@ -1,12 +1,12 @@
 import React, { FC, useState } from "react";
 
 import { ReactComponent as Close } from "../../assets/icons/Close.svg";
+import BottomDrawer from "../BottomDrawer/BottomDrawer";
+import Programms from "../Programms/Programms";
 
 import { menuData } from "../../data/data.mock";
 
 import styles from "./styles.module.scss";
-import BottomDrawer from "../BottomDrawer/BottomDrawer";
-import Programms from "../Programms/Programms";
 
 export type MenuListProps = {
   setIsMenuOpen: (value: boolean) => void;

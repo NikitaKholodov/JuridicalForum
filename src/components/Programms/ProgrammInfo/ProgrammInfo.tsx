@@ -1,13 +1,13 @@
 import React, { FC } from "react";
-import cn from "classnames";
 
 import { ReactComponent as Close } from "../../../assets/icons/Close.svg";
-
-import styles from "./styles.module.scss";
+import { ReactComponent as ChevronLeft } from "../../../assets/icons/ChevronLeft.svg";
 import ProgrammCard from "../ProgrammCard/ProgrammCard";
 import Accordion from "../../Accordion/Accordion";
 import Speakers from "../../Speakers/Speakers";
 import TranslationCard from "../../TranslationCard/TranslationCard";
+
+import styles from "./styles.module.scss";
 
 export type ProgrammInfoProps = {
   status?: string;
@@ -16,7 +16,7 @@ export type ProgrammInfoProps = {
   place?: string;
   datetime?: string;
   background?: string;
-  setIsPageOpen: React.MouseEventHandler<HTMLDivElement>;
+  setIsPageOpen: (value: boolean) => void;
 };
 
 const ProgrammInfo: FC<ProgrammInfoProps> = ({
@@ -30,9 +30,23 @@ const ProgrammInfo: FC<ProgrammInfoProps> = ({
 }) => (
   <div className={styles.wrapper}>
     <div className={styles.head}>
-      <div></div>
+      <div
+        className={styles.back}
+        onClick={(e) => {
+          e.stopPropagation();
+          setIsPageOpen(false);
+        }}
+      >
+        <ChevronLeft />
+      </div>
       <div>Программа</div>
-      <div className={styles.closeButton} onClick={setIsPageOpen}>
+      <div
+        className={styles.closeButton}
+        onClick={(e) => {
+          e.stopPropagation();
+          setIsPageOpen(false);
+        }}
+      >
         <Close />
       </div>
     </div>

@@ -59,12 +59,10 @@ interface StyledTabProps {
 }
 
 export type ProgrammsTabsProps = {
-  data: Array<string>
+  data: Array<string>;
 };
 
-const ProgrammsTabs: FC<ProgrammsTabsProps> = ({
-  data
-}) => {
+const ProgrammsTabs: FC<ProgrammsTabsProps> = ({ data }) => {
   const classes = useStyles();
   const [value, setValue] = React.useState(0);
 
