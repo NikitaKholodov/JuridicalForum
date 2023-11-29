@@ -1,0 +1,72 @@
+.wrapper {
+  border-radius: 24px;
+  overflow: hidden;
+}
+
+.card {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.shadow {
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 0.02) 9.22%,
+    rgba(0, 0, 0, 0.05) 18.76%,
+    rgba(0, 0, 0, 0.12) 28.48%,
+    rgba(0, 0, 0, 0.2) 38.19%,
+    rgba(0, 0, 0, 0.29) 47.75%,
+    rgba(0, 0, 0, 0.39) 56.99%,
+    rgba(0, 0, 0, 0.5) 65.75%,
+    rgba(0, 0, 0, 0.61) 73.87%,
+    rgba(0, 0, 0, 0.71) 81.18%,
+    rgba(0, 0, 0, 0.8) 87.52%,
+    rgba(0, 0, 0, 0.88) 92.74%,
+    rgba(0, 0, 0, 0.95) 96.66%,
+    rgba(0, 0, 0, 0.98) 99.14%,
+    #000 100%
+  );
+}
+
+.head {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 70px;
+}
+
+.logo {
+  height: 36px;
+  width: 36px;
+  padding: 6px;
+}
+
+.button {
+  padding: 6px;
+  border-radius: 5.786px;
+  background: rgba(255, 255, 255, 0.32);
+  max-height: 17px;
+  max-width: 17px;
+  display: flex;
+  align-items: center;
+}
+
+.name {
+  color: #fff;
+  font-size: 16.274px;
+  font-weight: 600;
+  line-height: 140%;
+  letter-spacing: 0.286px;
+  margin-bottom: 6px;
+}
+
+.date {
+  color: #fff;
+  font-size: 10.849px;
+  font-weight: 400;
+  line-height: 140%;
+  letter-spacing: 0.286px;
+  opacity: 0.8;
+}

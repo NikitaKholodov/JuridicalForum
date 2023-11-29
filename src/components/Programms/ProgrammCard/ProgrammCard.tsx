@@ -1,7 +1,9 @@
-import React, { FC } from "react";
+import React, { FC, useState } from "react";
 import cn from "classnames";
 
 import { ReactComponent as Live } from "../../../assets/icons/live.svg";
+import BottomDrawer from "../../BottomDrawer/BottomDrawer";
+import ProgrammInfo from "../ProgrammInfo/ProgrammInfo";
 
 import styles from "./styles.module.scss";
 
@@ -12,9 +14,8 @@ export type ProgrammCardProps = {
   place?: string;
   datetime?: string;
   background?: string;
-  fullWidth?: boolean
+  fullWidth?: boolean;
 };
-
 
 const ProgrammCard: FC<ProgrammCardProps> = ({
   status,
@@ -23,40 +24,63 @@ const ProgrammCard: FC<ProgrammCardProps> = ({
   place,
   datetime,
   background,
-  fullWidth
-}) => (
-  <div className={cn(styles.wrapper, {
-    [styles.fullWidth]: fullWidth
-  })} style={{
-    background: `url(${background})`,
-    backgroundSize: "cover",
-    
-  }}>
+  fullWidth,
+}) => {
+  const [isProgrammInfoOpen, setIsProgrammInfoOpen] = useState(false);
+
+  return (
     <div
-      className={cn(styles.card, {
-        [styles.shadow]: !!background,
+      className={cn(styles.wrapper, {
+        [styles.fullWidth]: fullWidth,
       })}
-      
+      style={{
+        background: `url(${background})`,
+        backgroundSize: "cover",
+      }}
+      onClick={() => setIsProgrammInfoOpen(true)}
     >
-      <div className={styles.status}><span>{status}</span> <Live /></div>
-      <div className={styles.category}>{category}</div>
       <div
-        className={cn(styles.title, {
-          [styles.whiteText]: !!background,
+        className={cn(styles.card, {
+          [styles.shadow]: !!background,
         })}
       >
-        {title}
+        <div className={styles.status}>
+          <span>{status}</span> <Live />
+        </div>
+        <div className={styles.category}>{category}</div>
+        <div
+          className={cn(styles.title, {
+            [styles.whiteText]: !!background,
+          })}
+        >
+          {title}
+        </div>
+        <div className={cn(styles.place, { [styles.whiteText]: !!background })}>
+          {place}
+        </div>
+        <div
+          className={cn(styles.datetime, { [styles.whiteText]: !!background })}
+        >
+          {datetime}
+        </div>
       </div>
-      <div className={cn(styles.place, { [styles.whiteText]: !!background })}>
-        {place}
-      </div>
-      <div
-        className={cn(styles.datetime, { [styles.whiteText]: !!background })}
+      <BottomDrawer
+        isPageOpen={isProgrammInfoOpen}
+        setIsPageOpen={setIsProgrammInfoOpen}
       >
-        {datetime}
-      </div>
+        <ProgrammInfo
+          key={title}
+          status={status}
+          category={category}
+          title={title}
+          place={place}
+          datetime={datetime}
+          background={background}
+          setIsPageOpen={() => setIsProgrammInfoOpen(false)}
+        />
+      </BottomDrawer>
     </div>
-  </div>
-);
+  );
+};
 
 export default ProgrammCard;

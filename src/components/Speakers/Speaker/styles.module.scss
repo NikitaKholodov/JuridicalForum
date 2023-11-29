@@ -1,0 +1,49 @@
+.wrapper {
+  padding: 16px 8px;
+  border-radius: 15px;
+  background: #f9f9f9;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-width: 118px;
+}
+
+.avatar {
+  height: 56px;
+  width: 56px;
+  border-radius: 50%;
+  margin-bottom: 8px;
+}
+
+.emptyAvatar {
+  height: 56px;
+  width: 56px;
+  border-radius: 50%;
+  margin-bottom: 8px;
+  background-color: #afafaf;
+}
+
+.name {
+  display: flex;
+  align-items: center;
+  color: #212122;
+  text-align: center;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 120%;
+  margin-bottom: 4px;
+  height: 28px;
+}
+
+.position {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  color: #778a9b;
+  white-space: nowrap;
+  font-size: 10px;
+  font-weight: 600;
+  line-height: 140%;
+  letter-spacing: 0.317px;
+  max-width: 56px;
+}

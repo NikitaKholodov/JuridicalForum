@@ -1,6 +1,5 @@
 import React, { FC, useState } from "react";
 
-
 import SliderTabPanel from "../SliderTabPanel/SliderTabPanel";
 import ProgrammCard from "./ProgrammCard/ProgrammCard";
 import Calendar from "../Calendar/Calendar";
@@ -14,22 +13,24 @@ import { programmsData } from "../../data/data.mock";
 
 import styles from "./styles.module.scss";
 
-
-
 export type ProgrammsPropsType = {
   setIsPageOpen: React.MouseEventHandler<HTMLDivElement>;
-}
+};
 
-const Programms: FC<ProgrammsPropsType> = ({setIsPageOpen}) => {
-  const [isSearch, setIsSearch] = useState(false)
+const Programms: FC<ProgrammsPropsType> = ({ setIsPageOpen }) => {
+  const [isSearch, setIsSearch] = useState(false);
 
   return (
     <div>
       <div className={styles.wrapper}>
         <div className={styles.head}>
-          <div onClick={setIsPageOpen}><BackArrow /></div>
+          <div onClick={setIsPageOpen}>
+            <BackArrow />
+          </div>
           <div>Программы</div>
-          <div onClick={() => setIsSearch(true)}><SearchIcon /></div>
+          <div onClick={() => setIsSearch(true)}>
+            <SearchIcon />
+          </div>
         </div>
         <div className={styles.sliderTabs}>
           <SliderTabPanel />
@@ -41,13 +42,13 @@ const Programms: FC<ProgrammsPropsType> = ({setIsPageOpen}) => {
           <Calendar />
         </div>
         <div className={styles.tabs}>
-          <ProgrammsTabs data = {programmsData.programmsTabs}/>
+          <ProgrammsTabs data={programmsData.programmsTabs} />
         </div>
         <div className={styles.programm}>
           {programmsData.programm[0].ivents.map((item) => (
             <div key={item.time}>
               <div className={styles.iventTime}>
-                {item.time} <span>{item.gtm}</span>
+                <div>{item.time}</div> <span>{item.gtm}</span>
               </div>
               <div className={styles.ivents}>
                 {item.card.map(
@@ -59,7 +60,8 @@ const Programms: FC<ProgrammsPropsType> = ({setIsPageOpen}) => {
                     datetime,
                     background,
                   }) => (
-                    <ProgrammCard key={title}
+                    <ProgrammCard
+                      key={title}
                       status={status}
                       category={category}
                       title={title}
@@ -74,7 +76,7 @@ const Programms: FC<ProgrammsPropsType> = ({setIsPageOpen}) => {
           ))}
         </div>
       </div>
-      <SwipeableBottomDrawer isPageOpen={isSearch} setIsPageOpen={() => setIsSearch(false)}>
+      <SwipeableBottomDrawer isPageOpen={isSearch} setIsPageOpen={setIsSearch}>
         <Search />
       </SwipeableBottomDrawer>
     </div>

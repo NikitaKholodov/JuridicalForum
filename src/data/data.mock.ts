@@ -97,7 +97,6 @@ export const menuData = [
   { name: "Пройти опрос", sublist: [] },
 ];
 
-
 export const programmsData = {
   topTabs: ["Программы", "Спикеры", "Партнеры"],
   date: {
@@ -111,13 +110,18 @@ export const programmsData = {
       { dayName: "Сб", dayNumber: 16, isChosen: false, fullDate: "16.08.2023" },
     ],
     disabledDays: [
-      { dayName: "Вс", dayNumber: 17, fullDate: "17.08.2023"  },
-      { dayName: "Пн", dayNumber: 18, fullDate: "18.08.2023"  },
-      { dayName: "Вт", dayNumber: 19, fullDate: "19.08.2023"  },
-      { dayName: "Ср", dayNumber: 20, fullDate: "20.08.2023"  },
+      { dayName: "Вс", dayNumber: 17, fullDate: "17.08.2023" },
+      { dayName: "Пн", dayNumber: 18, fullDate: "18.08.2023" },
+      { dayName: "Вт", dayNumber: 19, fullDate: "19.08.2023" },
+      { dayName: "Ср", dayNumber: 20, fullDate: "20.08.2023" },
     ],
   },
-  programmsTabs: ['Архитектура программы', 'Деловая программа', 'Стенд Минюста', 'Международный молодежный юридический форум'],
+  programmsTabs: [
+    "Архитектура программы",
+    "Деловая программа",
+    "Стенд Минюста",
+    "Международный молодежный юридический форум",
+  ],
   programm: [
     {
       date: "12.08.2023",
@@ -202,12 +206,13 @@ export const programmsData = {
 };
 
 export const searchData = {
-  categories: ['Человек и право', 
-  'Право в международных отношениях',
-  'Право, бизнес, санкции',
-  'Цифровая трансформация',
-  'КНД и регуляторика',
-  'Правосудие и процесс'
+  categories: [
+    "Человек и право",
+    "Право в международных отношениях",
+    "Право, бизнес, санкции",
+    "Цифровая трансформация",
+    "КНД и регуляторика",
+    "Правосудие и процесс",
   ],
   results: [
     {
@@ -217,25 +222,52 @@ export const searchData = {
       place: "Конгресс-центр,конференц-зал B1",
       datetime: "29 июн 2022 • 10:00–11:30 ",
       background: "",
-      id: '1'
-    }, 
-    {
-      status: "Трансляция",
-      category: "Право, бизнес, санкции",
-      title: "Ответственность топ-менеджеров в новой реальности",
-      place: "Конгресс-центр,конференц-зал B1",
-      datetime: "29 июн 2022 • 10:00–11:30 ",
-      background: "",
-      id: '2'
-    }, 
-    {
-      status: "Трансляция",
-      category: "Право, бизнес, санкции",
-      title: "Ответственность топ-менеджеров в новой реальности",
-      place: "Конгресс-центр,конференц-зал B1",
-      datetime: "29 июн 2022 • 10:00–11:30 ",
-      background: "",
-      id: '3'
+      id: "1",
     },
-  ]
-}
+    {
+      status: "Трансляция",
+      category: "Право, бизнес, санкции",
+      title: "Ответственность топ-менеджеров в новой реальности",
+      place: "Конгресс-центр,конференц-зал B1",
+      datetime: "29 июн 2022 • 10:00–11:30 ",
+      background: "",
+      id: "2",
+    },
+    {
+      status: "Трансляция",
+      category: "Право, бизнес, санкции",
+      title: "Ответственность топ-менеджеров в новой реальности",
+      place: "Конгресс-центр,конференц-зал B1",
+      datetime: "29 июн 2022 • 10:00–11:30 ",
+      background: "",
+      id: "3",
+    },
+  ],
+};
+
+export const speakersData = [
+  {
+    profileImg: "./img/profile.jpg",
+    name: "Нестеренко Александра",
+    position:
+      "Президент, Ассоциация «Некоммерческое партнерство «Объединение Корпоративных Юристов»",
+  },
+  {
+    profileImg: "",
+    name: "Гаврилов Геннадий",
+    position: "Судья",
+  },
+  {
+    profileImg: "",
+    name: "Беглов А.Д",
+    position: "Губернатор Санкт-Петербурга",
+  },
+];
+
+export const translationData = {
+  name: "Петербургский международный экономический форум 2023",
+  date: "2 марта 2022 года",
+  logo: "./img/logo.png",
+  background: "./img/background.png",
+  backgroundColor: "#122a5b",
+};

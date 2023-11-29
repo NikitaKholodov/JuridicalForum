@@ -41,11 +41,13 @@
   line-height: 140%; /* 25.2px */
   letter-spacing: 0.317px;
   margin-bottom: 12px;
+  display: flex;
+  height: 21px;
 
   span {
-      vertical-align: middle;
+      display: block;
       margin-left: 8px;
-      padding: 3.5px 12px;
+      padding: 0px 12px;
       border-radius: 40px;
       background: #45AD6E;
       color: #FFF;

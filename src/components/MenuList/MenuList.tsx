@@ -13,7 +13,7 @@ export type MenuListProps = {
 };
 
 const MenuList: FC<MenuListProps> = ({ setIsMenuOpen }) => {
-  const [programmsOpened, setProgrammsOpened] = useState(false)
+  const [programmsOpened, setProgrammsOpened] = useState(false);
 
   return (
     <div>
@@ -36,7 +36,9 @@ const MenuList: FC<MenuListProps> = ({ setIsMenuOpen }) => {
                 {sublist.length ? (
                   <ul className={styles.menuSublist}>
                     {sublist.map((item) => (
-                      <li key={item} onClick={() =>  setProgrammsOpened(true)}>{item}</li>
+                      <li key={item} onClick={() => setProgrammsOpened(true)}>
+                        {item}
+                      </li>
                     ))}
                   </ul>
                 ) : null}
@@ -45,7 +47,10 @@ const MenuList: FC<MenuListProps> = ({ setIsMenuOpen }) => {
           </ul>
         </div>
       </div>
-      <BottomDrawer isPageOpen={programmsOpened} setIsPageOpen={() => setProgrammsOpened(false)}>
+      <BottomDrawer
+        isPageOpen={programmsOpened}
+        setIsPageOpen={setProgrammsOpened}
+      >
         <Programms setIsPageOpen={() => setProgrammsOpened(false)} />
       </BottomDrawer>
     </div>
