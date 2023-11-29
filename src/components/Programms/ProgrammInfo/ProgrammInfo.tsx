@@ -51,16 +51,18 @@ const ProgrammInfo: FC<ProgrammInfoProps> = ({
       </div>
     </div>
     <div className={styles.info}>
-      <ProgrammCard
-        key={title}
-        status={status}
-        category={category}
-        title={title}
-        place={place}
-        datetime={datetime}
-        background={background}
-        fullWidth
-      />
+      <div className={styles.card}>
+        <ProgrammCard
+          key={title}
+          status={status}
+          category={category}
+          title={title}
+          place={place}
+          datetime={datetime}
+          background={background}
+          fullWidth
+        />
+      </div>
       <Speakers />
       <div className={styles.translation}>
         <span>Трансляции</span>
