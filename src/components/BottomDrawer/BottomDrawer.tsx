@@ -1,6 +1,6 @@
 import React, { FC } from "react";
 
-import { makeStyles, Drawer } from "@material-ui/core";
+import { makeStyles, Drawer, SwipeableDrawer } from "@material-ui/core";
 
 const useStyles = makeStyles({
   paper: {
@@ -13,12 +13,14 @@ export type BottomDrawerProps = {
   isPageOpen: boolean;
   setIsPageOpen: (value: boolean) => void;
   children: React.ReactNode;
+  swipeable: boolean;
 };
 
 const BottomDrawer: FC<BottomDrawerProps> = ({
   isPageOpen,
   setIsPageOpen,
   children,
+  swipeable,
 }) => {
   const classes = useStyles();
 
@@ -37,8 +39,18 @@ const BottomDrawer: FC<BottomDrawerProps> = ({
     };
 
   return (
-    <div>
-      <React.Fragment>
+    <React.Fragment>
+      {swipeable ? (
+        <SwipeableDrawer
+          classes={{ paper: classes.paper }}
+          anchor={"bottom"}
+          open={isPageOpen}
+          onClose={toggleDrawer(false)}
+          onOpen={toggleDrawer(true)}
+        >
+          {children}
+        </SwipeableDrawer>
+      ) : (
         <Drawer
           classes={{ paper: classes.paper }}
           anchor={"bottom"}
@@ -47,8 +59,8 @@ const BottomDrawer: FC<BottomDrawerProps> = ({
         >
           {children}
         </Drawer>
-      </React.Fragment>
-    </div>
+      )}
+    </React.Fragment>
   );
 };
 

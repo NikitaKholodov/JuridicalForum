@@ -16,7 +16,7 @@ function App() {
     <div>
       <Header />
       <ForumInfo isMenuOpen={isMenuOpen} setIsMenuOpen={handleOpen} />
-      <BottomDrawer isPageOpen={isMenuOpen} setIsPageOpen={setIsMenuOpen}>
+      <BottomDrawer isPageOpen={isMenuOpen} setIsPageOpen={setIsMenuOpen} swipeable={false}>
         <MenuList setIsMenuOpen={setIsMenuOpen} />
       </BottomDrawer>
     </div>

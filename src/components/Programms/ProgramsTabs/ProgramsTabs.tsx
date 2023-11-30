@@ -11,8 +11,6 @@ import AppBar from "@material-ui/core/AppBar";
 import Tabs from "@material-ui/core/Tabs";
 import Tab from "@material-ui/core/Tab";
 
-import styles from "./styles.module.scss";
-
 const useStyles = makeStyles((theme: Theme) => ({
   root: {
     flexGrow: 1,
@@ -58,11 +56,11 @@ interface StyledTabProps {
   label: string;
 }
 
-export type ProgrammsTabsProps = {
+export type ProgramsTabsProps = {
   data: Array<string>;
 };
 
-const ProgrammsTabs: FC<ProgrammsTabsProps> = ({ data }) => {
+const ProgramsTabs: FC<ProgramsTabsProps> = ({ data }) => {
   const classes = useStyles();
   const [value, setValue] = React.useState(0);
 
@@ -80,8 +78,8 @@ const ProgrammsTabs: FC<ProgrammsTabsProps> = ({ data }) => {
           scrollButtons="off"
           aria-label="scrollable auto tabs example"
         >
-          {data.map((item) => (
-            <StyledTab key={item} label={item} />
+          {data.map((name) => (
+            <StyledTab key={name} label={name} />
           ))}
         </StyledTabs>
       </AppBar>
@@ -89,4 +87,4 @@ const ProgrammsTabs: FC<ProgrammsTabsProps> = ({ data }) => {
   );
 };
 
-export default ProgrammsTabs;
+export default ProgramsTabs;

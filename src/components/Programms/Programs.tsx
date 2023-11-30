@@ -1,27 +1,27 @@
 import React, { FC, useState } from "react";
 
 import SliderTabPanel from "../SliderTabPanel/SliderTabPanel";
-import ProgrammCard from "./ProgrammCard/ProgrammCard";
+import ProgramCard from "./ProgramCard/ProgramCard";
 import Calendar from "../Calendar/Calendar";
-import ProgrammsTabs from "./ProgrammsTabs/ProgrammsTabs";
-import SwipeableBottomDrawer from "../SwipeableBottomDrawer/SwipeableBottomDrawer";
+import ProgramsTabs from "./ProgramsTabs/ProgramsTabs";
+import BottomDrawer from "../BottomDrawer/BottomDrawer";
 import Search from "../Search/Search";
 import { ReactComponent as BackArrow } from "../../assets/icons/BackArrow.svg";
 import { ReactComponent as SearchIcon } from "../../assets/icons/SearchIcon.svg";
 
-import { programmsData } from "../../data/data.mock";
+import { programsData } from "../../data/data.mock";
 
 import styles from "./styles.module.scss";
 
-export type ProgrammsPropsType = {
+export type ProgramsPropsType = {
   setIsPageOpen: React.MouseEventHandler<HTMLDivElement>;
 };
 
-const Programms: FC<ProgrammsPropsType> = ({ setIsPageOpen }) => {
+const Programs: FC<ProgramsPropsType> = ({ setIsPageOpen }) => {
   const [isSearch, setIsSearch] = useState(false);
 
   return (
-    <div>
+    <>
       <div className={styles.wrapper}>
         <div className={styles.head}>
           <div onClick={setIsPageOpen}>
@@ -36,16 +36,16 @@ const Programms: FC<ProgrammsPropsType> = ({ setIsPageOpen }) => {
           <SliderTabPanel />
         </div>
         <div className={styles.title}>
-          {programmsData.date.currentMonth} {programmsData.date.currentYear}
+          {programsData.date.currentMonth} {programsData.date.currentYear}
         </div>
         <div className={styles.calendar}>
           <Calendar />
         </div>
         <div className={styles.tabs}>
-          <ProgrammsTabs data={programmsData.programmsTabs} />
+          <ProgramsTabs data={programsData.programsTabs} />
         </div>
         <div className={styles.programm}>
-          {programmsData.programm[0].ivents.map((item) => (
+          {programsData.program[0].ivents.map((item) => (
             <div key={item.time}>
               <div className={styles.iventTime}>
                 <div>{item.time}</div> <span>{item.gtm}</span>
@@ -59,9 +59,10 @@ const Programms: FC<ProgrammsPropsType> = ({ setIsPageOpen }) => {
                     place,
                     datetime,
                     background,
+                    id,
                   }) => (
-                    <ProgrammCard
-                      key={title}
+                    <ProgramCard
+                      key={id}
                       status={status}
                       category={category}
                       title={title}
@@ -76,11 +77,11 @@ const Programms: FC<ProgrammsPropsType> = ({ setIsPageOpen }) => {
           ))}
         </div>
       </div>
-      <SwipeableBottomDrawer isPageOpen={isSearch} setIsPageOpen={setIsSearch}>
+      <BottomDrawer isPageOpen={isSearch} setIsPageOpen={setIsSearch} swipeable>
         <Search />
-      </SwipeableBottomDrawer>
-    </div>
+      </BottomDrawer>
+    </>
   );
 };
 
-export default Programms;
+export default Programs;

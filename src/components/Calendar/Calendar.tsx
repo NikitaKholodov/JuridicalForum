@@ -1,29 +1,43 @@
-import React from "react";
+import React, { useState } from "react";
 import cn from "classnames";
 
-import { programmsData } from "../../data/data.mock";
+import { programsData } from "../../data/data.mock";
 
 import styles from "./styles.module.scss";
 
-const Calendar = () => (
-  <div className={styles.calendar}>
-    <div className={styles.activeDays}>
-      {programmsData.date.activeDays.map((item) => (
-      <div key={item.fullDate} className={cn(styles.day, {
-        [styles.chosen]: item.isChosen
-      })}>
-        <div className={styles.dayName}>{item.dayName}</div>
-        <div className={styles.dayNumber}>{item.dayNumber}</div>
-      </div>))}
+const Calendar = () => {
+  const [activeDay, setActiveDay] = useState(0);
+
+  return (
+    <div className={styles.calendar}>
+      <div className={styles.activeDays}>
+        {programsData.date.activeDays.map(
+          ({ dayName, dayNumber, fullDate }, index) => (
+            <div
+              key={fullDate}
+              className={cn(styles.day, {
+                [styles.chosen]: index === activeDay,
+              })}
+              onClick={() => setActiveDay(index)}
+            >
+              <div className={styles.dayName}>{dayName}</div>
+              <div className={styles.dayNumber}>{dayNumber}</div>
+            </div>
+          )
+        )}
+      </div>
+      <div className={styles.disabledDays}>
+        {programsData.date.disabledDays.map(
+          ({ dayName, dayNumber, fullDate }) => (
+            <div key={fullDate} className={styles.day}>
+              <div className={styles.dayName}>{dayName}</div>
+              <div className={styles.dayNumber}>{dayNumber}</div>
+            </div>
+          )
+        )}
+      </div>
     </div>
-    <div className={styles.disabledDays}>
-    {programmsData.date.disabledDays.map((item) => (
-      <div key={item.fullDate} className={styles.day}>
-        <div className={styles.dayName}>{item.dayName}</div>
-        <div className={styles.dayNumber}>{item.dayNumber}</div>
-      </div>))}
-    </div>
-  </div>
-);
+  );
+};
 
 export default Calendar;

@@ -3,11 +3,11 @@ import cn from "classnames";
 
 import { ReactComponent as Live } from "../../../assets/icons/live.svg";
 import BottomDrawer from "../../BottomDrawer/BottomDrawer";
-import ProgrammInfo from "../ProgrammInfo/ProgrammInfo";
+import ProgramInfo from "../ProgramInfo/ProgramInfo";
 
 import styles from "./styles.module.scss";
 
-export type ProgrammCardProps = {
+export type ProgramCardProps = {
   status?: string;
   category?: string;
   title?: string;
@@ -17,7 +17,7 @@ export type ProgrammCardProps = {
   fullWidth?: boolean;
 };
 
-const ProgrammCard: FC<ProgrammCardProps> = ({
+const ProgramCard: FC<ProgramCardProps> = ({
   status,
   category,
   title,
@@ -26,7 +26,7 @@ const ProgrammCard: FC<ProgrammCardProps> = ({
   background,
   fullWidth,
 }) => {
-  const [isProgrammInfoOpen, setIsProgrammInfoOpen] = useState(false);
+  const [isProgramInfoOpen, setIsProgramInfoOpen] = useState(false);
 
   return (
     <div
@@ -37,7 +37,7 @@ const ProgrammCard: FC<ProgrammCardProps> = ({
         background: `url(${background})`,
         backgroundSize: "cover",
       }}
-      onClick={() => setIsProgrammInfoOpen(true)}
+      onClick={() => setIsProgramInfoOpen(true)}
     >
       <div
         className={cn(styles.card, {
@@ -65,10 +65,11 @@ const ProgrammCard: FC<ProgrammCardProps> = ({
         </div>
       </div>
       <BottomDrawer
-        isPageOpen={isProgrammInfoOpen}
-        setIsPageOpen={setIsProgrammInfoOpen}
+        isPageOpen={isProgramInfoOpen}
+        setIsPageOpen={setIsProgramInfoOpen}
+        swipeable={false}
       >
-        <ProgrammInfo
+        <ProgramInfo
           key={title}
           status={status}
           category={category}
@@ -76,11 +77,11 @@ const ProgrammCard: FC<ProgrammCardProps> = ({
           place={place}
           datetime={datetime}
           background={background}
-          setIsPageOpen={setIsProgrammInfoOpen}
+          setIsPageOpen={setIsProgramInfoOpen}
         />
       </BottomDrawer>
     </div>
   );
 };
 
-export default ProgrammCard;
+export default ProgramCard;

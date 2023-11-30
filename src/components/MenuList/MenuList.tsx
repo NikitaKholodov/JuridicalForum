@@ -2,7 +2,7 @@ import React, { FC, useState } from "react";
 
 import { ReactComponent as Close } from "../../assets/icons/Close.svg";
 import BottomDrawer from "../BottomDrawer/BottomDrawer";
-import Programms from "../Programms/Programms";
+import Programs from "../Programms/Programs";
 
 import { menuData } from "../../data/data.mock";
 
@@ -27,7 +27,7 @@ const MenuList: FC<MenuListProps> = ({ setIsMenuOpen }) => {
   const getDrawerContent = () => {
     switch (selectedMenuItem) {
       case "Программа":
-        return <Programms setIsPageOpen={handleCloseDrawer} />;
+        return <Programs setIsPageOpen={handleCloseDrawer} />;
       default:
         return null;
     }
@@ -37,7 +37,7 @@ const MenuList: FC<MenuListProps> = ({ setIsMenuOpen }) => {
     <div>
       <div className={styles.menu}>
         <div className={styles.head}>
-          <div></div>
+          <div />
           <div>Меню</div>
           <div
             className={styles.closeButton}
@@ -71,6 +71,7 @@ const MenuList: FC<MenuListProps> = ({ setIsMenuOpen }) => {
       <BottomDrawer
         isPageOpen={!!selectedMenuItem}
         setIsPageOpen={handleCloseDrawer}
+        swipeable={false}
       >
         {getDrawerContent()}
       </BottomDrawer>

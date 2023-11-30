@@ -86,12 +86,6 @@ const ScrollableTabPanel: FC<ScrollableTabPanelProps> = ({
           scrollButtons="off"
           aria-label="scrollable auto tabs example"
         >
-          <img
-            className={styles.menuIcon}
-            src={burger}
-            alt="menu"
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
-          />
           {tabsData.map(({ name, active }) => (
             <StyledTab key={name} label={name} />
           ))}

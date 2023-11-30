@@ -11,7 +11,7 @@ import AppBar from "@material-ui/core/AppBar";
 import Tabs from "@material-ui/core/Tabs";
 import Tab from "@material-ui/core/Tab";
 
-import { programmsData } from "../../data/data.mock";
+import { programsData } from "../../data/data.mock";
 
 const useStyles = makeStyles((theme: Theme) => ({
   root: {
@@ -81,8 +81,8 @@ const SliderTabPanel: FC = () => {
           scrollButtons="off"
           aria-label="Slider auto tabs example"
         >
-          {programmsData.topTabs.map((item) => (
-            <StyledTab key={item} label={item} />
+          {programsData.topTabs.map((name) => (
+            <StyledTab key={name} label={name} />
           ))}
         </StyledTabs>
       </AppBar>

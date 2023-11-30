@@ -1,16 +1,12 @@
 import React, { FC, useState } from "react";
 
-import { ReactComponent as SearchIcon2 } from "../../assets/icons/SearchIcon2.svg";
+import { ReactComponent as SearchIcon2 } from "../../assets/icons/SearchIconSmall.svg";
 import SearchCategory from "./SearchCategory/SearchCategory";
-import ProgrammCard from "../Programms/ProgrammCard/ProgrammCard";
+import ProgramCard from "../Programms/ProgramCard/ProgramCard";
 
 import { searchData } from "../../data/data.mock";
 
 import styles from "./styles.module.scss";
-
-
-
-
 
 const Search: FC = () => {
   const [searchFieldValue, setSearchFieldValue] = useState("");
@@ -24,17 +20,20 @@ const Search: FC = () => {
           type="text"
           placeholder="Поиск"
           className={styles.input}
-        ></input>
+        />
       </div>
       <div className={styles.categories}>
         {!searchFieldValue &&
-          searchData.categories.map((item) => <SearchCategory key={item} name={item} />)}
+          searchData.categories.map((name) => (
+            <SearchCategory key={name} name={name} />
+          ))}
       </div>
       <div className={styles.results}>
         {searchFieldValue &&
           searchData.results.map(
             ({ status, category, title, place, datetime, background, id }) => (
-              <ProgrammCard key={id}
+              <ProgramCard
+                key={id}
                 status={status}
                 category={category}
                 title={title}

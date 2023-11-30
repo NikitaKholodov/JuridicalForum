@@ -4,6 +4,7 @@ import Card from "../Card/Card";
 import Accordion from "../Accordion/Accordion";
 import Contact from "../Contact/Contact";
 import ScrollableTabPanel from "../ScrollableTabPanel/ScrollableTabPanel";
+import burger from "../../assets/icons/burger.png";
 
 import { accordionData, cardData, contactsData } from "../../data/data.mock";
 
@@ -14,34 +15,37 @@ export type ForumInfoProps = {
   isMenuOpen: boolean;
 };
 
-const ForumInfo: FC<ForumInfoProps> = ({ setIsMenuOpen, isMenuOpen }) => {
-  return (
-    <div className={styles.content}>
-      <div className={styles.menu}>
+const ForumInfo: FC<ForumInfoProps> = ({ setIsMenuOpen, isMenuOpen }) => (
+  <div className={styles.content}>
+    <div className={styles.menu}>
+      <img
+        className={styles.menuIcon}
+        src={burger}
+        alt="menu"
+        onClick={() => setIsMenuOpen(!isMenuOpen)}
+      />
+      <div className={styles.tabs}>
         <ScrollableTabPanel
           setIsMenuOpen={setIsMenuOpen}
           isMenuOpen={isMenuOpen}
         />
       </div>
-      <div className={styles.cards}>
-        {cardData.map(({ name, color, icon }) => (
-          <Card key={name} color={color} name={name} icon={icon} />
-        ))}
-      </div>
-      <div className={styles.description}>
-        <Accordion
-          title={accordionData.title}
-          content={accordionData.content}
-        />
-      </div>
-      <div className={styles.contacts}>
-        <span>Обратная связь</span>
-        {contactsData.map(({ icon, info, linkType }) => (
-          <Contact key={icon} info={info} linkType={linkType} icon={icon} />
-        ))}
-      </div>
     </div>
-  );
-};
+    <div className={styles.cards}>
+      {cardData.map(({ name, color, icon, id }) => (
+        <Card key={id} color={color} name={name} icon={icon} />
+      ))}
+    </div>
+    <div className={styles.description}>
+      <Accordion title={accordionData.title} content={accordionData.content} />
+    </div>
+    <div className={styles.contacts}>
+      <span>Обратная связь</span>
+      {contactsData.map(({ icon, info, linkType, id }) => (
+        <Contact key={id} info={info} linkType={linkType} icon={icon} />
+      ))}
+    </div>
+  </div>
+);
 
 export default ForumInfo;

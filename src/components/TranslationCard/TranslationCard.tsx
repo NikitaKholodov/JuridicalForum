@@ -1,7 +1,7 @@
 import React, { FC } from "react";
 import cn from "classnames";
 
-import { ReactComponent as Share2 } from "../../assets/icons/Share2.svg";
+import { ReactComponent as Share } from "../../assets/icons/ShareArrow.svg";
 
 import { translationData } from "../../data/data.mock";
 
@@ -24,7 +24,7 @@ const TranslationCard: FC = () => (
       <div className={styles.head}>
         <img className={styles.logo} src={translationData.logo} alt="" />
         <div className={styles.button}>
-          <Share2 />
+          <Share />
         </div>
       </div>
       <div className={styles.name}>{translationData.name}</div>

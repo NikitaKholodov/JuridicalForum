@@ -11,14 +11,17 @@ export const tabsData = [
   {
     name: "Сервисы",
     active: true,
+    id: 1,
   },
   {
     name: "Описание",
     active: false,
+    id: 2,
   },
   {
     name: "Контакты",
     active: false,
+    id: 3,
   },
 ];
 
@@ -27,34 +30,40 @@ export const cardData = [
     name: "Фирменное фото",
     icon: "./img/camera.png",
     color: "163.42deg, #114165 19.15%, #309C75 133.82%, #6EE4EC 172.91%",
+    id: 1,
   },
   {
     name: "Биржа деловых контактов",
     icon: "./img/people.png",
     color:
       "241.64deg, #114063 1.04%, rgba(38, 40, 83, 0.97) 48.07%, #F7306E 172.19%",
+    id: 2,
   },
   {
     name: "Карта площадки",
     icon: "./img/map.png",
     color:
       "61.72deg, #582A8B -5.37%, #174970 62.33%, #18CC5A 149.83%, #30E79E 152.63%",
+    id: 3,
   },
   {
     name: "Фотобанк",
     icon: "./img/gallery.png",
     color:
       "303.15deg, #FF9101 -56.24%, #143D60 49.14%, #143D60 65.67%, #BD1B7C 145.42%",
+    id: 4,
   },
   {
     name: "Запрос статусов беджа, ПЦР, ТС",
     icon: "./img/note.png",
     color: "222.24deg, #D12AAC -80.67%, #174264 58.84%, #09647B 116.61%",
+    id: 5,
   },
   {
     name: "Центр информирования",
     icon: "./img/messages.png",
     color: "123.16deg, #114063 -0.48%, #115463 39.45%, #F89931 109.61%",
+    id: 6,
   },
 ];
 
@@ -69,12 +78,23 @@ export const accordionData = {
 };
 
 export const contactsData = [
-  { icon: "./img/phone.png", info: "+7 (812) 406 77 02", linkType: "tel:" },
-  { icon: "./img/link.png", info: "https://legalforum.info", linkType: "" },
+  {
+    icon: "./img/phone.png",
+    info: "+7 (812) 406 77 02",
+    linkType: "tel:",
+    id: 1,
+  },
+  {
+    icon: "./img/link.png",
+    info: "https://legalforum.info",
+    linkType: "",
+    id: 2,
+  },
   {
     icon: "./img/mail.png",
     info: "contact@legalforum.info",
     linkType: "mailto:",
+    id: 3,
   },
 ];
 
@@ -97,7 +117,7 @@ export const menuData = [
   { name: "Пройти опрос", sublist: [] },
 ];
 
-export const programmsData = {
+export const programsData = {
   topTabs: ["Программы", "Спикеры", "Партнеры"],
   date: {
     currentMonth: "Август",
@@ -116,13 +136,13 @@ export const programmsData = {
       { dayName: "Ср", dayNumber: 20, fullDate: "20.08.2023" },
     ],
   },
-  programmsTabs: [
+  programsTabs: [
     "Архитектура программы",
     "Деловая программа",
     "Стенд Минюста",
     "Международный молодежный юридический форум",
   ],
-  programm: [
+  program: [
     {
       date: "12.08.2023",
       ivents: [
@@ -137,6 +157,7 @@ export const programmsData = {
               place: "Конгресс-центр,конференц-зал B1",
               datetime: "29 июн 2022 • 10:00–11:30 ",
               background: "",
+              id: 1,
             },
             {
               status: "Трансляция",
@@ -146,6 +167,7 @@ export const programmsData = {
               place: "Конгресс-центр, конференц-зал B2",
               datetime: "29 июн 2022 • 10:00–11:30 ",
               background: "./img/cardBackground.jpg",
+              id: 2,
             },
           ],
         },
@@ -160,6 +182,7 @@ export const programmsData = {
               place: "Конгресс-центр, конференц-зал B1",
               datetime: "29 июн 2022 • 12:00",
               background: "",
+              id: 3,
             },
             {
               status: "Трансляция",
@@ -169,6 +192,7 @@ export const programmsData = {
               place: "Конгресс-центр, конференц-зал B2",
               datetime: "29 июн 2022 • 10:00–11:30 ",
               background: "./img/cardBackground.jpg",
+              id: 4,
             },
           ],
         },
@@ -188,6 +212,7 @@ export const programmsData = {
               place: "Конгресс-центр, конференц-зал B1",
               datetime: "29 июн 2022 • 12:00",
               background: "",
+              id: 5,
             },
             {
               status: "Трансляция",
@@ -197,6 +222,7 @@ export const programmsData = {
               place: "Конгресс-центр, конференц-зал B2",
               datetime: "29 июн 2022 • 10:00–11:30 ",
               background: "",
+              id: 6,
             },
           ],
         },
