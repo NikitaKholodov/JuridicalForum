@@ -13,7 +13,25 @@ export type MenuListProps = {
 };
 
 const MenuList: FC<MenuListProps> = ({ setIsMenuOpen }) => {
-  const [programmsOpened, setProgrammsOpened] = useState(false);
+  const [selectedMenuItem, setSelectedMenuItem] = useState("");
+
+  const handleMenuItemClick = (itemName: string, e: React.MouseEvent) => {
+    e.stopPropagation();
+    setSelectedMenuItem(itemName);
+  };
+
+  const handleCloseDrawer = () => {
+    setSelectedMenuItem("");
+  };
+
+  const getDrawerContent = () => {
+    switch (selectedMenuItem) {
+      case "Программа":
+        return <Programms setIsPageOpen={handleCloseDrawer} />;
+      default:
+        return null;
+    }
+  };
 
   return (
     <div>
@@ -36,7 +54,10 @@ const MenuList: FC<MenuListProps> = ({ setIsMenuOpen }) => {
                 {sublist.length ? (
                   <ul className={styles.menuSublist}>
                     {sublist.map((item) => (
-                      <li key={item} onClick={() => setProgrammsOpened(true)}>
+                      <li
+                        key={item}
+                        onClick={(e) => handleMenuItemClick(item, e)}
+                      >
                         {item}
                       </li>
                     ))}
@@ -48,10 +69,10 @@ const MenuList: FC<MenuListProps> = ({ setIsMenuOpen }) => {
         </div>
       </div>
       <BottomDrawer
-        isPageOpen={programmsOpened}
-        setIsPageOpen={setProgrammsOpened}
+        isPageOpen={!!selectedMenuItem}
+        setIsPageOpen={handleCloseDrawer}
       >
-        <Programms setIsPageOpen={() => setProgrammsOpened(false)} />
+        {getDrawerContent()}
       </BottomDrawer>
     </div>
   );
