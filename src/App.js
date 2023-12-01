@@ -1,25 +1,18 @@
-import React, { useState } from "react";
+import React from "react";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 
-import Header from "./components/Header/Header";
-import ForumInfo from "./components/ForumInfo/ForumInfo";
-import BottomDrawer from "./components/BottomDrawer/BottomDrawer";
-import MenuList from "./components/MenuList/MenuList";
+import FirstMockup from "./FirstMockup/FirstMockup";
+import SecondMockup from "./SecondMockup/SecondMockup";
+
 
 function App() {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-
-  const handleOpen = () => {
-    setIsMenuOpen(true);
-  };
-
   return (
-    <div>
-      <Header />
-      <ForumInfo isMenuOpen={isMenuOpen} setIsMenuOpen={handleOpen} />
-      <BottomDrawer isPageOpen={isMenuOpen} setIsPageOpen={setIsMenuOpen} swipeable={false}>
-        <MenuList setIsMenuOpen={setIsMenuOpen} />
-      </BottomDrawer>
-    </div>
+    <BrowserRouter>
+    <Routes>
+      <Route path="firstmockup" element={<FirstMockup />}/>
+      <Route path="secondmockup" element={<SecondMockup />}/>
+    </Routes>
+    </BrowserRouter>
   );
 }
 
