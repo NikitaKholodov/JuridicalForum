@@ -5,11 +5,10 @@ import { ReactComponent as Focus } from "../../assets/icons/Focus.svg";
 import { ReactComponent as Search } from "../../assets/icons/Search.svg";
 import { ReactComponent as Notifications } from "../../assets/icons/Notifications.svg";
 import { ReactComponent as Apps } from "../../assets/icons/Apps.svg";
-import HeaderCard from "../HeaderCard/HeaderCard";
-
-import { headerCardsData } from "../../data/data.mock";
 
 import styles from "./styles.module.scss";
+import HeaderCard from "./HeaderCard/HeaderCard";
+import { headerCardsData } from "../../data/data.mock";
 
 const Header = () => (
   <header className={styles.header}>
