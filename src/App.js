@@ -10,7 +10,7 @@ function App() {
     <BrowserRouter>
     <Routes>
       <Route path="firstmockup" element={<FirstMockup />}/>
-      <Route path="secondmockup" element={<SecondMockup />}/>
+      <Route path="*" element={<SecondMockup />}/>
     </Routes>
     </BrowserRouter>
   );
