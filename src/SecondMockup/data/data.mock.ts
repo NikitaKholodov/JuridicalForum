@@ -65,3 +65,11 @@ export const newsData = [
     id: 3,
   },
 ];
+
+export const menuData = [
+  { icon: "home", label: "главная", id: 1 },
+  { icon: "calendar", label: "календарь", id: 2 },
+  { icon: "ticket", label: "cервисы", id: 3 },
+  { icon: "chat", label: "чат", id: 4 },
+  { icon: "profile", label: "профиль", id: 5 },
+];

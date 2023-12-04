@@ -1,11 +1,13 @@
 import React from "react";
 
 import DateTabs from "./DateTabs/DateTabs";
-
-import styles from "./styles.module.scss";
-import { eventCardData, newsData } from "../../data/data.mock";
 import EventCard from "./EventCard/EventCard";
 import News from "./News/News";
+import Menu from "../Menu/Menu";
+
+import { eventCardData, newsData } from "../../data/data.mock";
+
+import styles from "./styles.module.scss";
 
 const Info = () => (
   <div className={styles.wrapper}>
@@ -33,6 +35,7 @@ const Info = () => (
         </div>
       </div>
     </div>
+    <Menu />
   </div>
 );
 

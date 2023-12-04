@@ -1,0 +1,53 @@
+.wrapper {
+  position: fixed;
+  bottom: 10px;
+  border-radius: 16px;
+  background-color: #a6192e;
+  height: 54px;
+  width: 87%;
+  display: flex;
+  overflow: hidden;
+}
+
+.menuItem {
+  width: 20%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: -0.24px;
+  text-transform: lowercase;
+  color: #d28c96;
+
+  svg {
+    height: 24px;
+    fill: #d28c96;
+  }
+
+  &:nth-child(even) {
+    color: #761120;
+
+    svg {
+      fill: #761120;
+    }
+  }
+}
+
+.active {
+  color: #fff;
+
+  svg {
+    fill: #fff;
+
+    path {
+      fill: #fff;
+    }
+  }
+
+  &:nth-child(even) {
+    color: #fff;
+  }
+}
