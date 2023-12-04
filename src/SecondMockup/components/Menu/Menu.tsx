@@ -7,8 +7,9 @@ import { ReactComponent as TicketStar } from "../../assets/icons/Ticket-Star.svg
 import { ReactComponent as Chat } from "../../assets/icons/chat.svg";
 import { ReactComponent as Profile } from "../../assets/icons/Profile.svg";
 
-import styles from "./styles.module.scss";
 import { menuData } from "../../data/data.mock";
+
+import styles from "./styles.module.scss";
 
 const Menu: FC = () => {
   const [active, setActive] = useState(1);

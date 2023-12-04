@@ -1,7 +1,7 @@
 .wrapper {
   margin-top: -25px;
   border-radius: 24px 24px 0 0;
-  padding: 24px 0 24px 24px;
+  padding: 24px 0;
   background-color: #f2f5f7;
 }
 
@@ -14,7 +14,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-right: 24px;
+  padding: 0 24px;
 
   div {
     color: #a6192e;
@@ -32,6 +32,7 @@
   line-height: 140%;
   letter-spacing: 0.317px;
   margin: 12px 0;
+  padding: 0 24px;
 }
 
 .events {
@@ -43,7 +44,7 @@
 }
 
 .news {
-  margin-top: 12px;
+  margin: 12px 0 48px 0;
 }
 
 .newsRow {
@@ -52,4 +53,5 @@
   display: flex;
   flex-direction: column;
   gap: 8px;
+  padding: 0 24px;
 }

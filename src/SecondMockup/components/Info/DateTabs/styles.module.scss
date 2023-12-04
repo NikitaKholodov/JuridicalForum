@@ -24,6 +24,10 @@
     font-weight: 400;
     line-height: 12px;
   }
+
+  &:first-child {
+    margin-left: 24px;
+  }
 }
 
 .active {
