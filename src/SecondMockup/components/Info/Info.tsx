@@ -3,8 +3,9 @@ import React from "react";
 import DateTabs from "./DateTabs/DateTabs";
 
 import styles from "./styles.module.scss";
-import { eventCardData } from "../../data/data.mock";
+import { eventCardData, newsData } from "../../data/data.mock";
 import EventCard from "./EventCard/EventCard";
+import News from "./News/News";
 
 const Info = () => (
   <div className={styles.wrapper}>
@@ -24,6 +25,11 @@ const Info = () => (
         <div className={styles.title}>
           <span>Новости</span>
           <div>Все</div>
+        </div>
+        <div className={styles.newsRow}>
+          {newsData.map(({ label, date, time, img, id }) => (
+            <News label={label} date={date} time={time} image={img} key={id} />
+          ))}
         </div>
       </div>
     </div>

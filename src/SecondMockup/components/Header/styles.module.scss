@@ -1,6 +1,6 @@
 .header {
   height: 200px;
-  padding: 16px 24px 24px 24px;
+  padding: 16px 0px 24px 24px;
   color: #fff;
   background: url("../../assets/icons/pattern.png");
   background-size: cover;
@@ -9,6 +9,7 @@
 }
 
 .navigation {
+  padding-right: 24px;
   display: flex;
   justify-content: space-between;
   margin-bottom: 40px;

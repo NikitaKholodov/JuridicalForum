@@ -1,0 +1,29 @@
+.wrapper {
+  display: flex;
+  background-color: #fff;
+  border-radius: 16px;
+  padding: 16px 17px;
+}
+
+.image {
+  width: 96px;
+  height: 97px;
+}
+
+.label {
+  color: #212122;
+  text-overflow: ellipsis;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 140%;
+  margin-bottom: 18px;
+  max-height: 65px;
+  overflow: hidden;
+}
+
+.datetime {
+  color: #778a9b;
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 140%;
+}
