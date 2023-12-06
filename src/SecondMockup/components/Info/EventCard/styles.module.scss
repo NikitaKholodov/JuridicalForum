@@ -8,6 +8,10 @@
     background-color: #132a5a !important;
     margin-left: 24px;
   }
+
+  &:last-child {
+    margin-right: 24px;
+  }
 }
 
 .card {

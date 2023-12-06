@@ -1,5 +1,6 @@
 import React, { FC, useState } from "react";
 import cn from "classnames";
+import { Link } from "react-router-dom";
 
 import { ReactComponent as Home } from "../../assets/icons/Home.svg";
 import { ReactComponent as Calendar } from "../../assets/icons/Calendar.svg";
@@ -33,17 +34,18 @@ const Menu: FC = () => {
 
   return (
     <div className={styles.wrapper}>
-      {menuData.map(({ icon, label, id }) => (
-        <div
-          key={id}
+      {menuData.map(({ icon, label, id, link }) => (
+        <Link
+          to={link}
           className={cn(styles.menuItem, {
             [styles.active]: active === id,
           })}
           onClick={() => setActive(id)}
+          key={id}
         >
           {handleGetIcon(icon)}
           <span>{label}</span>
-        </div>
+        </Link>
       ))}
     </div>
   );

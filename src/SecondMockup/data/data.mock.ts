@@ -67,9 +67,9 @@ export const newsData = [
 ];
 
 export const menuData = [
-  { icon: "home", label: "главная", id: 1 },
-  { icon: "calendar", label: "календарь", id: 2 },
-  { icon: "ticket", label: "cервисы", id: 3 },
-  { icon: "chat", label: "чат", id: 4 },
-  { icon: "profile", label: "профиль", id: 5 },
+  { icon: "home", label: "главная", id: 1, link: "/" },
+  { icon: "calendar", label: "календарь", id: 2, link: "/calendar" },
+  { icon: "ticket", label: "cервисы", id: 3, link: "/" },
+  { icon: "chat", label: "чат", id: 4, link: "/" },
+  { icon: "profile", label: "профиль", id: 5, link: "/" },
 ];

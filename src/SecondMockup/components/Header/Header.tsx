@@ -37,9 +37,11 @@ const Header = () => (
         </div>
         <span>Все сервисы</span>
       </div>
-      {headerCardsData.map(({ label, img, id }) => (
-        <HeaderCard key={id} img={img} label={label} />
-      ))}
+      <div className={styles.cards}>
+        {headerCardsData.map(({ label, img, id }) => (
+          <HeaderCard key={id} img={img} label={label} />
+        ))}
+      </div>
     </div>
   </header>
 );

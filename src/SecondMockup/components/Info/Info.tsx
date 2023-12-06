@@ -3,7 +3,6 @@ import React from "react";
 import DateTabs from "./DateTabs/DateTabs";
 import EventCard from "./EventCard/EventCard";
 import News from "./News/News";
-import Menu from "../Menu/Menu";
 
 import { eventCardData, newsData } from "../../data/data.mock";
 
@@ -35,7 +34,6 @@ const Info = () => (
         </div>
       </div>
     </div>
-    <Menu />
   </div>
 );
 

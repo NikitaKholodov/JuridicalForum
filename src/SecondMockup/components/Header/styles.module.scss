@@ -75,3 +75,12 @@
   display: flex;
   justify-content: right;
 }
+
+.cards {
+  display: flex;
+  gap: 8px;
+
+  &:last-child {
+    margin-right: 24px;
+  }
+}

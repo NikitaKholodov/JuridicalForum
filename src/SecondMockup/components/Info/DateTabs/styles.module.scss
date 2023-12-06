@@ -28,6 +28,10 @@
   &:first-child {
     margin-left: 24px;
   }
+
+  &:last-child {
+    margin-right: 24px;
+  }
 }
 
 .active {
