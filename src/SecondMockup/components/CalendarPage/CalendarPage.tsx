@@ -1,14 +1,16 @@
 import React from "react";
 
-import styles from "./styles.module.scss";
-import SliderTabPanel from "./Tabs/Tabs";
 import ScrollableTabPanel from "./Tabs/Tabs";
+import CalendarPageContent from "./CalendarPageContent/CalendarPageContent";
+
+import styles from "./styles.module.scss";
 
 function CalendarPage() {
   return (
     <div className={styles.wrapper}>
       <span className={styles.title}>Календарь событий</span>
       <ScrollableTabPanel />
+      <CalendarPageContent />
     </div>
   );
 }

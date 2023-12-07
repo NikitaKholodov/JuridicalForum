@@ -1,0 +1,138 @@
+.wrapper {
+  padding: 16px;
+  background-color: #fff;
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 24px;
+  gap: 12px;
+  min-width: 207px;
+}
+
+.head {
+  display: flex;
+  justify-content: space-between;
+}
+
+.type {
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 120%;
+  letter-spacing: -0.18px;
+}
+
+.yellow {
+  color: #ffa614;
+  border: 1px solid #ffa614;
+  background-color: #faebdc;
+}
+
+.blue {
+  color: #3995ff;
+  border: 1px solid #3995ff;
+  background-color: #d8e8f7;
+}
+
+.green {
+  color: #38b7bd;
+  border: 1px solid #38b7bd;
+  background-color: #dff3f2;
+}
+
+.name {
+  min-height: 74px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.title {
+  color: #272a33;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 20px;
+  margin-bottom: 8px;
+}
+
+.subtitle {
+  color: #9ba3a8;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 120%;
+  letter-spacing: -0.36px;
+  max-height: 42px;
+  overflow: hidden;
+}
+
+.status {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 8px 0;
+  border-top: 1px solid #f2f5f7;
+  border-bottom: 1px solid #f2f5f7;
+  margin-top: -2px;
+}
+
+.start {
+  color: #a6192e;
+  font-size: 11.5px;
+  font-weight: 600;
+  line-height: 120%;
+  letter-spacing: -0.36px;
+}
+
+.isMember {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  width: fit-content;
+  padding: 5px 8px;
+  border-radius: 12px;
+  background-color: #a6192e;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: -0.18px;
+
+  svg {
+    fill: #fdf0f4;
+  }
+}
+
+.contacts {
+  color: #272a33;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 18.5px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.contact {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.user {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: fit-content;
+  padding: 8px;
+  border-radius: 38px;
+  background-color: #f2f5f7;
+  color: #212122;
+  font-size: 11.5px;
+  font-weight: 400;
+  line-height: 140%;
+
+  img {
+    width: 16px;
+    height: 16px;
+  }
+}
