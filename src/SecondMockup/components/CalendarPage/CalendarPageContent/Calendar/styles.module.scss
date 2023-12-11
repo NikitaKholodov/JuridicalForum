@@ -95,8 +95,15 @@
 .dayName {
   align-self: center;
   box-sizing: border-box;
-  min-height: 32px;
-  max-height: 30px;
+  min-height: 31px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  div {
+    max-height: 28px;
+    width: 28px;
+  }
 }
 
 .disabled,

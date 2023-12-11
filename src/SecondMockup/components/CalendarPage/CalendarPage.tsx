@@ -36,21 +36,21 @@ export type DaysData = {
     | {
         number: number;
         day: string;
-        events: {
+        events: Array<{
           type: null;
           firstDay: boolean;
           lastDay: boolean;
-        };
+        }>;
         disabled: boolean;
       }
     | {
         number: number;
         day: string;
-        events: {
+        events: Array<{
           type: string;
           firstDay: boolean;
           lastDay: boolean;
-        };
+        }>;
         disabled: boolean;
       }
   )[];

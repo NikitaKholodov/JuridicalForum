@@ -36,15 +36,15 @@ const Calendar: FC<CalendarProps> = ({ daysData }) => {
           <div
             className={cn(styles.day, {
               [styles.disabled]: disabled,
-              [styles.dateYellow]: events.type === "Личная встреча",
-              [styles.dateGrey]: events.type === "Сегодняшний день",
+              [styles.dateYellow]: events[0].type === "Личная встреча",
+              [styles.dateGrey]: events[0].type === "Сегодняшний день",
               [styles.dateBlue]:
-                events.type === "Российское мероприятие Фонда Росконгресс ",
+                events[0].type === "Российское мероприятие Фонда Росконгресс",
               [styles.dateGreen]:
-                events.type === "Зарубежное мероприятие Фонда Росконгресс ",
-              [styles.firstDay]: events.firstDay,
-              [styles.lastDay]: events.lastDay,
-              [styles.middleDay]: !events.firstDay && !events.lastDay,
+                events[0].type === "Зарубежное мероприятие Фонда Росконгресс",
+              [styles.firstDay]: events[0].firstDay,
+              [styles.lastDay]: events[0].lastDay,
+              [styles.middleDay]: !events[0].firstDay && !events[0].lastDay,
             })}
             key={day}
           >
@@ -61,9 +61,9 @@ const Calendar: FC<CalendarProps> = ({ daysData }) => {
                 [styles.grey]: name === "Сегодняшний день",
                 [styles.yellow]: name === "Личная встреча",
                 [styles.blue]:
-                  name === "Российское мероприятие Фонда Росконгресс ",
+                  name === "Российское мероприятие Фонда Росконгресс",
                 [styles.green]:
-                  name === "Зарубежное мероприятие Фонда Росконгресс ",
+                  name === "Зарубежное мероприятие Фонда Росконгресс",
               })}
             >
               {name}
