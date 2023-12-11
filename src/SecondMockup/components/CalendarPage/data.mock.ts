@@ -348,7 +348,7 @@ export const calendarEventsData = [
     id: 4,
     date: {
       gtm: "GTM+3",
-      firstNumber: "24",
+      firstNumber: "23",
       secondNumber: "27",
       month: "Сент",
       id: 1,
