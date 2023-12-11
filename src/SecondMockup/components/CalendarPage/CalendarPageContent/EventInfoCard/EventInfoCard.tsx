@@ -5,6 +5,7 @@ import { ReactComponent as LogoCalendar } from "../../../../assets/icons/LogoCal
 import { ReactComponent as Location } from "../../../../assets/icons/Location.svg";
 import { ReactComponent as Site } from "../../../../assets/icons/Site.svg";
 import { ReactComponent as Phone } from "../../../../assets/icons/Phone.svg";
+import { ReactComponent as DotMenu } from "../../../../assets/icons/DotMenu.svg";
 
 import styles from "./styles.module.scss";
 
@@ -38,7 +39,9 @@ const EventInfoCard: FC<EventInfoCardProps> = ({ card }) => {
         >
           {card.type}
         </div>
-        <div className={styles.options}></div>
+        <div className={styles.options}>
+          <DotMenu />
+        </div>
       </div>
       <div className={styles.name}>
         <div className={styles.title}>{card.title}</div>

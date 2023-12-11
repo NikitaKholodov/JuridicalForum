@@ -23,6 +23,7 @@ const StyledTabs = withStyles({
     borderBottom: "0px solid #e8e8e8",
     boxShadow: "none",
     maxHeight: 40,
+    minHeight: 40,
     marginBottom: 16,
   },
   indicator: {

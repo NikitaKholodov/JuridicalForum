@@ -1,5 +1,144 @@
+export const calendarData = {
+  dates: [
+    { number: 28, day: "28.08.2023", events: {}, disabled: true },
+    { number: 29, day: "29.08.2023", events: {}, disabled: true },
+    { number: 30, day: "30.08.2023", events: {}, disabled: true },
+    { number: 31, day: "31.08.2023", events: {}, disabled: true },
+    { number: 1, day: "01.09.2023", events: {}, disabled: false },
+    { number: 2, day: "02.09.2023", events: {}, disabled: false },
+    { number: 3, day: "03.09.2023", events: {}, disabled: false },
+    {
+      number: 4,
+      day: "04.09.2023",
+      events: { type: "Сегодняшний день" },
+      disabled: false,
+    },
+    { number: 5, day: "05.09.2023", events: {}, disabled: false },
+    {
+      number: 6,
+      day: "06.09.2023",
+      events: { type: "Личная встреча" },
+      disabled: false,
+    },
+    {
+      number: 7,
+      day: "07.09.2023",
+      events: {
+        type: "Российское мероприятие Фонда Росконгресс ",
+        firstDay: true,
+        lastDay: false,
+      },
+      disabled: false,
+    },
+    {
+      number: 8,
+      day: "08.09.2023",
+      events: {
+        type: "Российское мероприятие Фонда Росконгресс ",
+        firstDay: false,
+        lastDay: true,
+      },
+      disabled: false,
+    },
+    { number: 9, day: "09.09.2023", events: {}, disabled: false },
+    { number: 10, day: "10.09.2023", events: {}, disabled: false },
+    { number: 11, day: "11.09.2023", events: {}, disabled: false },
+    {
+      number: 12,
+      day: "12.09.2023",
+      events: {
+        type: "Зарубежное мероприятие Фонда Росконгресс ",
+        firstDay: true,
+        lastDay: false,
+      },
+      disabled: false,
+    },
+    {
+      number: 13,
+      day: "13.09.2023",
+      events: {
+        type: "Зарубежное мероприятие Фонда Росконгресс ",
+        firstDay: false,
+        lastDay: true,
+      },
+      disabled: false,
+    },
+    { number: 14, day: "14.09.2023", events: {}, disabled: false },
+    { number: 15, day: "15.09.2023", events: {}, disabled: false },
+    { number: 16, day: "16.09.2023", events: {}, disabled: false },
+    { number: 17, day: "17.09.2023", events: {}, disabled: false },
+    { number: 18, day: "18.09.2023", events: {}, disabled: false },
+    { number: 19, day: "19.09.2023", events: {}, disabled: false },
+    { number: 20, day: "20.09.2023", events: {}, disabled: false },
+    { number: 21, day: "21.09.2023", events: {}, disabled: false },
+    { number: 22, day: "22.09.2023", events: {}, disabled: false },
+    {
+      number: 23,
+      day: "23.09.2023",
+      events: {
+        type: "Российское мероприятие Фонда Росконгресс ",
+        firstDay: true,
+        lastDay: false,
+      },
+      disabled: false,
+    },
+    {
+      number: 24,
+      day: "24.09.2023",
+      events: {
+        type: "Российское мероприятие Фонда Росконгресс ",
+        firstDay: false,
+        lastDay: false,
+      },
+      disabled: false,
+    },
+    {
+      number: 25,
+      day: "25.09.2023",
+      events: {
+        type: "Российское мероприятие Фонда Росконгресс ",
+        firstDay: false,
+        lastDay: false,
+      },
+      disabled: false,
+    },
+    {
+      number: 26,
+      day: "26.09.2023",
+      events: {
+        type: "Российское мероприятие Фонда Росконгресс ",
+        firstDay: false,
+        lastDay: false,
+      },
+      disabled: false,
+    },
+    {
+      number: 27,
+      day: "27.09.2023",
+      events: {
+        type: "Российское мероприятие Фонда Росконгресс ",
+        firstDay: false,
+        lastDay: true,
+      },
+      disabled: false,
+    },
+    { number: 28, day: "28.09.2023", events: {}, disabled: false },
+    { number: 29, day: "29.09.2023", events: {}, disabled: false },
+    { number: 30, day: "30.09.2023", events: {}, disabled: false },
+    { number: 1, day: "01.10.2023", events: {}, disabled: true },
+  ],
+  daysName: ["Пн", "Вт", "Ср", "Чт", "Пт", "Сб", "Вс"],
+  legend: [
+    "Сегодняшний день",
+    "Личная встреча",
+    "Российское мероприятие Фонда Росконгресс ",
+    "Зарубежное мероприятие Фонда Росконгресс ",
+  ],
+};
+
 export const calendarEventsData = [
   {
+    id: 1,
     date: {
       gtm: "GTM+3",
       firstNumber: "6",
@@ -21,6 +160,7 @@ export const calendarEventsData = [
     },
   },
   {
+    id: 2,
     date: {
       gtm: "GTM+3",
       firstNumber: "7",
@@ -42,6 +182,7 @@ export const calendarEventsData = [
     },
   },
   {
+    id: 3,
     date: {
       gtm: "GTM+3",
       firstNumber: "12",
@@ -63,6 +204,7 @@ export const calendarEventsData = [
     },
   },
   {
+    id: 4,
     date: {
       gtm: "GTM+3",
       firstNumber: "24",

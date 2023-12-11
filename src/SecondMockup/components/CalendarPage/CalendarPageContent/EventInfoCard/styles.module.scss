@@ -12,6 +12,12 @@
 .head {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+}
+
+.options {
+  height: 19px;
+  cursor: pointer;
 }
 
 .type {
