@@ -94,11 +94,9 @@
 .day,
 .dayName {
   align-self: center;
-
-  div {
-    box-sizing: border-box;
-    max-height: 30px;
-  }
+  box-sizing: border-box;
+  min-height: 32px;
+  max-height: 30px;
 }
 
 .disabled,
@@ -145,7 +143,7 @@
   border-left: none;
   position: relative;
 
-  &::before {
+  &::after {
     content: url("../../../../assets/icons/RedLogo.svg");
     position: absolute;
     top: -8px;

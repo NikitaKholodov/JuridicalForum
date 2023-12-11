@@ -3,11 +3,14 @@ import cn from "classnames";
 
 import { ReactComponent as DropdownArrow } from "../../../../assets/icons/DropdownArrow.svg";
 
-import { calendarData } from "../../data.mock";
-
 import styles from "./styles.module.scss";
+import { DaysData } from "../../CalendarPage";
 
-const Calendar: FC = () => {
+export type CalendarProps = {
+  daysData: DaysData;
+};
+
+const Calendar: FC<CalendarProps> = ({ daysData }) => {
   const [isLegendOpen, setIsLegendOpen] = useState(false);
 
   return (
@@ -24,12 +27,12 @@ const Calendar: FC = () => {
         className={styles.dates}
         onClick={() => setIsLegendOpen(!isLegendOpen)}
       >
-        {calendarData.daysName.map((name) => (
+        {daysData.daysName.map((name) => (
           <div className={styles.dayName} key={name}>
             {name}
           </div>
         ))}
-        {calendarData.dates.map(({ number, day, disabled, events }) => (
+        {daysData.dates.map(({ number, day, disabled, events }) => (
           <div
             className={cn(styles.day, {
               [styles.disabled]: disabled,
@@ -51,7 +54,7 @@ const Calendar: FC = () => {
       </div>
       {isLegendOpen && (
         <div className={styles.legend}>
-          {calendarData.legend.map((name) => (
+          {daysData.legend.map((name) => (
             <div
               key={name}
               className={cn(styles.legendItem, {

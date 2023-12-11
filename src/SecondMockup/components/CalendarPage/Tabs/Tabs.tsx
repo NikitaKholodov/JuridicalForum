@@ -10,6 +10,13 @@ import {
 import AppBar from "@material-ui/core/AppBar";
 import Tabs from "@material-ui/core/Tabs";
 import Tab from "@material-ui/core/Tab";
+import { CardsData, DaysData } from "../CalendarPage";
+import {
+  allCalendarData,
+  calendarEventsData,
+  forumEventsCalendarData,
+  myEventsCalendarData,
+} from "../data.mock";
 
 const useStyles = makeStyles((theme: Theme) => ({
   root: {
@@ -44,7 +51,7 @@ const StyledTab = withStyles((theme: Theme) =>
       backgroundColor: "#ffffff",
       padding: "5px 17.5px",
       color: "#282828",
-      marginRight: 11.5,
+      marginRight: 10.5,
       fontFamily: ["SF Pro Display", "sans-serif"].join(","),
       "&$selected": {
         backgroundColor: "#282828",
@@ -57,11 +64,14 @@ const StyledTab = withStyles((theme: Theme) =>
 
 interface StyledTabProps {
   label: string;
+  onClick: (event: React.MouseEvent) => void;
 }
 
-const values = ["Все", "Мои", "Мероприятия фонда"];
+export type TabsProps = {
+  handleSetData: (daysData: DaysData, cardsData: CardsData) => void;
+};
 
-const ScrollableTabPanel: FC = () => {
+const ScrollableTabPanel: FC<TabsProps> = ({ handleSetData }) => {
   const classes = useStyles();
   const [value, setValue] = React.useState(0);
 
@@ -77,11 +87,30 @@ const ScrollableTabPanel: FC = () => {
           onChange={handleChange}
           variant="scrollable"
           scrollButtons="off"
-          aria-label="scrollable auto tabs example"
+          aria-label="scrollable auto tabs"
         >
-          {values.map((name) => (
-            <StyledTab key={name} label={name} />
-          ))}
+          <StyledTab
+            label={"Все"}
+            onClick={() => handleSetData(allCalendarData, calendarEventsData)}
+          />
+          <StyledTab
+            label={"Мои"}
+            onClick={() =>
+              handleSetData(
+                myEventsCalendarData,
+                calendarEventsData.filter((item) => item.card.isMember === true)
+              )
+            }
+          />
+          <StyledTab
+            label={"Мероприятия фонда"}
+            onClick={() =>
+              handleSetData(
+                forumEventsCalendarData,
+                calendarEventsData.filter((item) => item.card.isForum === true)
+              )
+            }
+          />
         </StyledTabs>
       </AppBar>
     </div>
