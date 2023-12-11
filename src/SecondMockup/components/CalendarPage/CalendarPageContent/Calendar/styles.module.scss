@@ -88,14 +88,14 @@
   color: #212122;
   font-size: 15px;
   font-weight: 600;
-  line-height: 32px;
+  line-height: 28px;
 }
 
 .day,
 .dayName {
   align-self: center;
   box-sizing: border-box;
-  min-height: 31px;
+  min-height: 32px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -113,8 +113,11 @@
 
 .dateGrey {
   padding: 0 6px;
+  border: 0px solid #778a9b;
 
-  div {
+  span {
+    display: block;
+    width: 28px;
     background-color: #ebedf0;
     border-radius: 24px;
   }
@@ -123,7 +126,9 @@
 .dateYellow {
   padding: 0 6px;
 
-  div {
+  span {
+    display: block;
+    width: 28px;
     outline: 1.5px solid #ffa614;
     border-radius: 24px;
     background: #faebdc;
@@ -161,4 +166,22 @@
 .middleDay {
   border-right: none;
   border-left: none;
+}
+
+.dots {
+  position: absolute;
+  display: flex;
+  transform: translateY(-20px);
+  justify-content: space-around;
+}
+
+.dot {
+  max-width: 0px;
+  border-radius: 50%;
+  border-width: 2px;
+  padding: 0;
+
+  &:first-child {
+    display: none;
+  }
 }

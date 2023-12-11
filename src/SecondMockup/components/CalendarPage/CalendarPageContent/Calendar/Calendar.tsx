@@ -48,7 +48,26 @@ const Calendar: FC<CalendarProps> = ({ daysData }) => {
             })}
             key={day}
           >
-            <div>{number}</div>
+            <div className={styles.dots}>
+              {events.length >= 2 &&
+                events.map((_, index) => (
+                  <div
+                    className={cn(styles.dot, {
+                      [styles.dateYellow]:
+                        events[index].type === "Личная встреча",
+                      [styles.dateGrey]:
+                        events[index].type === "Сегодняшний день",
+                      [styles.dateBlue]:
+                        events[index].type ===
+                        "Российское мероприятие Фонда Росконгресс",
+                      [styles.dateGreen]:
+                        events[index].type ===
+                        "Зарубежное мероприятие Фонда Росконгресс",
+                    })}
+                  ></div>
+                ))}
+            </div>
+            <span>{number}</span>
           </div>
         ))}
       </div>
