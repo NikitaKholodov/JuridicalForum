@@ -22,10 +22,11 @@ const Questions: FC = () => {
 
   return (
     <>
-      <div
-        className={styles.wrapper}
-        onClick={() => setIsDrawerOpen(true)}
-      ></div>
+      <div className={styles.wrapper}>
+        <span>Остались вопросы?</span>
+        <span>Напишите нам и мы ответим</span>
+        <button onClick={() => setIsDrawerOpen(true)}>Написать</button>
+      </div>
       <BottomDrawer
         swipeable
         isPageOpen={isDrawerOpen}
