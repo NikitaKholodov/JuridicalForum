@@ -9,6 +9,7 @@ import burger from "../../assets/icons/burger.png";
 import { accordionData, cardData, contactsData } from "../../data/data.mock";
 
 import styles from "./styles.module.scss";
+import Questions from "../Questions/Questions";
 
 export type ForumInfoProps = {
   setIsMenuOpen: (value: boolean) => void;
@@ -45,6 +46,7 @@ const ForumInfo: FC<ForumInfoProps> = ({ setIsMenuOpen, isMenuOpen }) => (
         <Contact key={id} info={info} linkType={linkType} icon={icon} />
       ))}
     </div>
+    <Questions />
   </div>
 );
 
