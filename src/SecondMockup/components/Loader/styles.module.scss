@@ -1,0 +1,27 @@
+.wrapper {
+  width: 88px;
+  height: 88px;
+  position: absolute;
+  top: calc(50% - 88px);
+  left: calc(50% - 44px);
+  background-color: #fff;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  outline: none;
+
+  svg {
+    border-radius: 50%;
+    animation: rotation 5000ms linear infinite;
+  }
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
