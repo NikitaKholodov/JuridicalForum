@@ -1,9 +1,9 @@
 import React, { FC } from "react";
 
+import { Modal } from "@material-ui/core";
 import { ReactComponent as LoaderIcon } from "../../assets/icons/LoaderIcon.svg";
 
 import styles from "./styles.module.scss";
-import { Modal } from "@material-ui/core";
 
 export type LoaderProps = {
   isOpen: boolean;

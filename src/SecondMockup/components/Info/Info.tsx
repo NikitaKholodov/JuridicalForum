@@ -3,11 +3,11 @@ import React, { useState } from "react";
 import DateTabs from "./DateTabs/DateTabs";
 import EventCard from "./EventCard/EventCard";
 import News from "./News/News";
+import Loader from "../Loader/Loader";
 
 import { eventCardData, newsData } from "../../data/data.mock";
 
 import styles from "./styles.module.scss";
-import Loader from "../Loader/Loader";
 
 const Info = () => {
   const [isFetching, setIsFetching] = useState(false);

@@ -1,12 +1,12 @@
 import React, { FC, useState } from "react";
 import cn from "classnames";
 
+import { Modal } from "@material-ui/core";
 import { ReactComponent as Close } from "../../assets/icons/Close.svg";
 import BottomDrawer from "../BottomDrawer/BottomDrawer";
 import { ReactComponent as Confirmed } from "../../assets/icons/Confirmed.svg";
 
 import styles from "./styles.module.scss";
-import { Modal } from "@material-ui/core";
 
 const Questions: FC = () => {
   const [fieldValue, setFieldValue] = useState("");
@@ -24,7 +24,7 @@ const Questions: FC = () => {
     <>
       <div className={styles.wrapper}>
         <span>Остались вопросы?</span>
-        <span>Напишите нам и мы ответим</span>
+        <span>Напишите нам и мы вам ответим</span>
         <button onClick={() => setIsDrawerOpen(true)}>Написать</button>
       </div>
       <BottomDrawer

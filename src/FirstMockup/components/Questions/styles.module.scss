@@ -5,24 +5,22 @@
     rgba(58, 186, 109, 1) 0%,
     rgba(13, 241, 104, 1) 100%
   );
-  width: calc(100% - 20px);
+  width: calc(100% - 32px);
   margin-top: 12px;
   border-radius: 16px;
   display: flex;
   flex-direction: column;
-  gap: 14px;
+  gap: 13px;
   padding: 16px;
 
   span {
     color: #fff;
     font-size: 12px;
-    letter-spacing: 1.8px;
   }
 
   span:first-child {
     color: #fff;
-    font-size: 14px;
-    letter-spacing: 1px;
+    font-size: 15px;
   }
 
   button {
