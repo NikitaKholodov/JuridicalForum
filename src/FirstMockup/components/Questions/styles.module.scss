@@ -9,9 +9,15 @@
   margin-top: 12px;
   border-radius: 16px;
   display: flex;
-  flex-direction: column;
-  gap: 13px;
+  align-items: center;
+  justify-content: space-between;
   padding: 16px;
+
+  div:first-child {
+    display: flex;
+    flex-direction: column;
+    gap: 13px;
+  }
 
   span {
     color: #fff;
@@ -31,6 +37,10 @@
     background-color: #fff;
     color: rgba(58, 186, 109, 1);
   }
+}
+
+.questionsIcon {
+  margin: 5px 5px 0 0;
 }
 
 .drawerContent {

@@ -3,6 +3,7 @@ import cn from "classnames";
 
 import { Modal } from "@material-ui/core";
 import { ReactComponent as Close } from "../../assets/icons/Close.svg";
+import { ReactComponent as QuestionsIcon } from "../../assets/icons/QuestionsIcon.svg";
 import BottomDrawer from "../BottomDrawer/BottomDrawer";
 import { ReactComponent as Confirmed } from "../../assets/icons/Confirmed.svg";
 
@@ -23,9 +24,14 @@ const Questions: FC = () => {
   return (
     <>
       <div className={styles.wrapper}>
-        <span>Остались вопросы?</span>
-        <span>Напишите нам и мы вам ответим</span>
-        <button onClick={() => setIsDrawerOpen(true)}>Написать</button>
+        <div>
+          <span>Остались вопросы?</span>
+          <span>Напишите нам и мы вам ответим</span>
+          <button onClick={() => setIsDrawerOpen(true)}>Написать</button>
+        </div>
+        <div className={styles.questionsIcon}>
+          <QuestionsIcon />
+        </div>
       </div>
       <BottomDrawer
         swipeable
